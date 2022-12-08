@@ -2,6 +2,7 @@ import logo from "../Assets/logo.png";
 
 import { Disclosure } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
+import {Link } from "react-router-dom"
 
 
 export default function NavBar() {
@@ -27,18 +28,18 @@ export default function NavBar() {
               </div>
               <div className="hidden items-center md:ml-6 md:space-x-8 md:flex md:flex-1  md:justify-end">
                 {/* only show this tabs when size is > md */}
-                  <a
-                    href="/home"
+                  <Link
+                    to="/home"
                     className="inline-flex items-center px-1 pt-1 text-sm font-medium text-white"
                   >
                     Home
-                  </a>
-                  <a
-                    href="/about"
+                  </Link>
+                  <Link
+                    to="/about"
                     className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-white"
                   >
                     About
-                  </a>
+                  </Link>
                   <a
                     href="https://github.com/FrankLeeeee?tab=repositories"
                     target="_blank"
