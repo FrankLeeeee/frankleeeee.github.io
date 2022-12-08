@@ -33,3 +33,6 @@ Server/config.js
 
 # vscode
 .vscode
+
+# mac cache
+.DS_Store
