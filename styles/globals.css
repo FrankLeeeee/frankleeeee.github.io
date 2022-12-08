@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+  --section-background-color: linear-gradient(
+    to bottom left,
+    rgba(17, 16, 16, 0.582),
+    rgba(12, 8, 24, 0.904)
+  );
+
+  --image-gradient: linear-gradient(
+    to bottom left,
+    rgba(17, 16, 16, 0.678),
+    rgba(12, 10, 22, 0.863)
+  );
+}
+
+body {
+  height: 100vh;
+  background: #000;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.gradient-color {
+  color: #7319fa;
+  background-image: -webkit-linear-gradient(45deg, #7319fa, #ff33b4, #ff7e29);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.Typewriter__wrapper {
+  color: #7319fa;
+  background-image: -webkit-linear-gradient(
+    45deg,
+    #f64f59,
+    #c471ed,
+    #12c2e9
+  ) !important;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.Typewriter__cursor {
+  color: white !important;
+}
+
+@media (max-width: 767px) {
+  .Typewriter__wrapper {
+    font-size: 1.4em !important;
+    font-weight: 500 !important;
+    position: absolute !important;
+  }
+  .Typewriter__cursor {
+    display: none !important;
+  }
+}

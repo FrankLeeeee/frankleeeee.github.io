@@ -1,0 +1,24 @@
+.tech-icons {
+    /* border: 1.7px solid rgba(200, 137, 230, 0.637) !important; */
+    /* box-shadow: 4px 5px 4px 3px rgba(89, 4, 168, 0.137) !important; */
+    border-width: 4px;
+    border-style: solid;
+    border-image: linear-gradient(to right, #7319fa, #ff33b4) 1;
+    /* border-image: -webkit-linear-gradient(45deg, #7319fa, #ff33b4, #ff7e29); */
+    transition: all 0.4s ease 0s !important;
+  }
+  
+  @media (max-width: 767px) {
+    .tech-icons {
+      margin: 10px !important;
+    }
+  }
+  
+  .tech-icons:hover {
+    transform: scale(1.05) !important;
+    overflow: hidden !important;
+    border-style: solid;
+    border-image: linear-gradient(to right, #7319fa, #ff7e29) 1;
+    transition: all 0.4s ease 0s !important;
+  }
+  

@@ -27,3 +27,9 @@ yarn-error.log*
 
 Server/node_modules
 Server/config.js
+
+# next js
+.next
+
+# vscode
+.vscode

@@ -6,6 +6,7 @@ on:
       - main
   pull_request:
   workflow_dispatch:
+    
 
 jobs:
   deploy:
@@ -20,23 +21,27 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v3
         with:
-          node-version: '18'
+          node-version: '14'
+
+      - name: Get yarn cache
+        id: yarn-cache
+        run: echo "YARN_CACHE_DIR=$(yarn cache dir)" >> "${GITHUB_OUTPUT}"
 
       - name: Cache dependencies
         uses: actions/cache@v3
         with:
-          path: ~/.npm
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          path: ${{ steps.yarn-cache.outputs.YARN_CACHE_DIR }}
+          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
           restore-keys: |
-            ${{ runner.os }}-node-
-      
-      - run: npm install
-      - run: npm run build
+            ${{ runner.os }}-yarn-
+
+      - run: yarn install --frozen-lockfile
+      - run: yarn build
+      - run: yarn export
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         if: ${{ github.ref == 'refs/heads/main' }}
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./build
-
+          publish_dir: ./out
