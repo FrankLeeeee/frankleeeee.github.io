@@ -29,6 +29,8 @@ jobs:
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
           restore-keys: |
             ${{ runner.os }}-node-
+      
+      - uses: nanasess/setup-chromedriver@v1
 
       - run: npm install
       - run: npm run build
