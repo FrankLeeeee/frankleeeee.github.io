@@ -17,7 +17,7 @@ function App() {
             />
           </div>
         </div>
-        <div className="mt-16 p-12">
+        <div className="mt-8 p-12 mb-16">
           <Contact />
         </div>
       </div>

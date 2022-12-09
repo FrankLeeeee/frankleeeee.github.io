@@ -24,7 +24,7 @@ function About() {
             <Techstack />
           </div>
 
-          <div className="mt-5 flex flex-row justify-center">
+          <div className="mt-5 flex flex-row justify-center pb-24">
             <Github />
           </div>
         </div>

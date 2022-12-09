@@ -27,7 +27,7 @@ function Github() {
           username="FrankLeeeee"
           blockSize={4}
           blockMargin={1}
-          fontSize={12}
+          fontSize={8}
         />
       </div>
     </div>

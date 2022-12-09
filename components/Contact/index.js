@@ -1,5 +1,6 @@
 import React from "react";
 import { contacts } from "../../data";
+import Link from "next/link";
 
 function Contact() {
   return (
@@ -10,9 +11,9 @@ function Contact() {
             key={idx}
             className="flex items-center justify-center bg-white rounded-full shadow-sm border-transparent w-10 h-10 mx-3 hover:bg-violet-600 hover:text-white"
           >
-            <a href={item.url} target="_blank" rel="noreferrer">
+            <Link href={item.url} target="_blank">
               <item.icon className="w-5 h-5" />
-            </a>
+            </Link>
           </div>
         ))}
       </div>
