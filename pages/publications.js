@@ -22,7 +22,7 @@ export default function Publications() {
             className="flex items-center rounded bg-transparent border-white text-white px-2 py-2 font-semibold ring-1 ring-inset ring-white"
           >
             <ArrowRightCircleIcon className="h-8 mr-2" />
-            <span>View My Goold Scholars</span>
+            <span>View My Google Scholars</span>
           </a>
         </div>
       </div>
