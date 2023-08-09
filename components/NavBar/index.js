@@ -45,15 +45,13 @@ export default function NavBar() {
                   Projects
                 </Link>
                 <Link
-                  href="https://scholar.google.com.sg/citations?user=XuwmCz4AAAAJ&hl=en"
-                  target="_blank"
+                  href="/publications "
                   className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-white "
                 >
                   Publications
                 </Link>
                 <Link
-                  href="https://frankleeeee.medium.com/"
-                  target="_blank"
+                  href="/blogs"
                   className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-white "
                 >
                   Blogs
