@@ -47,10 +47,10 @@ function About() {
   return (
     <Layout>
       <div>
-        <div className="container mx-auto pt-12 md:pt-24 md:px-12 lg:pt-40 lg:px-24">
-          <div className="flex w-full justify-center text-center text-white">
-            <h1 className="font-bold text-lg">My Recent Blogs</h1>
-          </div>
+        <div className="container mx-auto pt-4 md:pt-12 md:px-12 lg:pt-24 lg:px-24">
+          <h1 className="text-white text-4xl p-4">
+            <strong className="purple">My Recent Blogs</strong>
+          </h1>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
             {blogs.map((blog, index) => (
               <div key={index} className="p-8 md:p-6 lg:p-4">
