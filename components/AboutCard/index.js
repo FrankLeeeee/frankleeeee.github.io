@@ -13,9 +13,15 @@ function AboutCard() {
           deep learning.
           <br />
           <br /> I am participating in exciting projects such as &nbsp;
-            <Link href="https://github.com/hpcaitech/ColossalAI" target="_blank"
-                  ><strong className="gradient-color">Colossal-AI </strong></Link>.&nbsp;
-            <img src="https://img.shields.io/github/stars/hpcaitech/ColossalAI?style=social" alt="star-badge" className="inline"></img>
+          <Link href="https://github.com/hpcaitech/ColossalAI" target="_blank">
+            <strong className="gradient-color">Colossal-AI </strong>
+          </Link>
+          .&nbsp;
+          <img
+            src="https://img.shields.io/github/stars/hpcaitech/ColossalAI?style=social"
+            alt="star-badge"
+            className="inline"
+          ></img>
           <br />
           <br />
           <br />
