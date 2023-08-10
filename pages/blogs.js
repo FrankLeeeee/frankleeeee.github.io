@@ -66,7 +66,7 @@ function About() {
           </div>
         </div>
 
-        <div className="flex w-full justify-center text-center text-white mt-8">
+        <div className="flex w-full justify-center text-center text-white p-8">
           <a
             href={mediumURL}
             target="_blank"
