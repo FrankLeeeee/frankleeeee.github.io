@@ -38,13 +38,6 @@ export default function NavBar() {
                   About
                 </Link>
                 <Link
-                  href="https://github.com/FrankLeeeee?tab=repositories"
-                  target="_blank"
-                  className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-white "
-                >
-                  Projects
-                </Link>
-                <Link
                   href="/publications "
                   className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-white "
                 >
@@ -55,6 +48,13 @@ export default function NavBar() {
                   className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-white "
                 >
                   Blogs
+                </Link>
+                <Link
+                  href="https://github.com/FrankLeeeee?tab=repositories"
+                  target="_blank"
+                  className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-white "
+                >
+                  Projects
                 </Link>
               </div>
               <div className="flex items-center md:hidden">
@@ -90,27 +90,25 @@ export default function NavBar() {
               </Disclosure.Button>
               <Disclosure.Button
                 as={Link}
-                href="https://github.com/FrankLeeeee?tab=repositories"
-                target="_blank"
-                className="block border-l-4 border-b py-2 pl-3 pr-4 text-base font-medium text-white hover:bg-white hover:text-black"
-              >
-                Projects
-              </Disclosure.Button>
-              <Disclosure.Button
-                as={Link}
-                href="https://scholar.google.com.sg/citations?user=XuwmCz4AAAAJ&hl=en"
-                target="_blank"
+                href="/publications"
                 className="block border-l-4 border-b py-2 pl-3 pr-4 text-base font-medium text-white hover:bg-white hover:text-black"
               >
                 Publications
               </Disclosure.Button>
               <Disclosure.Button
                 as={Link}
-                href="https://frankleeeee.medium.com/"
-                target="_blank"
+                href="/blogs"
                 className="block border-l-4 border-b py-2 pl-3 pr-4 text-base font-medium text-white hover:bg-white hover:text-black"
               >
                 Blogs
+              </Disclosure.Button>
+              <Disclosure.Button
+                as={Link}
+                href="https://github.com/FrankLeeeee?tab=repositories"
+                target="_blank"
+                className="block border-l-4 border-b py-2 pl-3 pr-4 text-base font-medium text-white hover:bg-white hover:text-black"
+              >
+                Projects
               </Disclosure.Button>
             </div>
           </Disclosure.Panel>
