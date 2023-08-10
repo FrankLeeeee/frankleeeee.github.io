@@ -192,7 +192,7 @@ export const publications = [
         ],
         url: "#",
         publisher:
-          "Proceedings of the 2023 International Conference for Parallel Programming (ICPP 2023)",
+          "Proceedings of the 2023 International Conference for Parallel Processing (ICPP 2023)",
       },
       {
         name: "Sequence Parallelism: Long Sequence Training from System Perspective",
