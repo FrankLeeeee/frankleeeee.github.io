@@ -6,7 +6,8 @@ function AboutCard() {
     <div>
       <blockquote className="text-white">
         <p className="text-left">
-          Hi Everyone, I am <span className="gradient-color">Frank Lee </span>
+          Hi Everyone, I am{" "}
+          <span className="gradient-color">Frank Lee (Shenggui Li)</span>
           from 📍 Singapore.
           <br /> I graduated from Nanyang Technological University in 2021.
           <br /> I am interested in the intersection of software engineering and

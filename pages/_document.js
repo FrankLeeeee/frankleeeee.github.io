@@ -9,16 +9,23 @@ export default function Document() {
           name="description"
           content="Personal website of Frank Lee (Shenggui Li)"
         />
+        <meta
+          name="keywords"
+          content="Frank Lee, Shenggui Li, HPC, AI, Full Stack, Engineering, Open-source"
+        ></meta>
         <meta name="theme-color" content="#000000" />
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="" />
+        <meta
+          property="og:title"
+          content="Frank Lee (Shenggui Li) | Strive for Excellence"
+        />
         <meta
           property="og:description"
           content="Personal website of Frank Lee (Shenggui Li)"
         />
         <meta
           property="og:site_name"
-          content="Frank Lee | Strive for Excellence"
+          content="Frank Lee (Shenggui Li) | Strive for Excellence"
         />
         <link rel="icon" href="/favicon.ico" />
         <link rel="manifest" href="/manifest.json" />
