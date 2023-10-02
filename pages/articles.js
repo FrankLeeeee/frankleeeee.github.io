@@ -1,7 +1,7 @@
 import Layout from "../components/Layout";
 import { useState, useEffect } from "react";
 import axios from "axios";
-import BlogCard from "../components/BlogCard";
+import BlogCard from "../components/Blog/BlogCard";
 import { ArrowRightCircleIcon } from "@heroicons/react/24/outline";
 
 function About() {
