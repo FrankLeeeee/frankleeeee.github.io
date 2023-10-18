@@ -50,6 +50,12 @@ export default function NavBar() {
                   Blogs
                 </Link>
                 <Link
+                  href="/articles"
+                  className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-white "
+                >
+                  Articles
+                </Link>
+                <Link
                   href="https://github.com/FrankLeeeee?tab=repositories"
                   target="_blank"
                   className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-white "
