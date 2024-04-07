@@ -6,7 +6,7 @@ const BlogItem = ({ blog }) => {
     <div>
       <div className="col-span-1 flex rounded-md shadow-sm">
         {/* left side image */}
-        <div className="flex flex-shrink-0 items-center justify-center rounded-l-md text-sm font-medium text-white">
+        <div className="flex flex-shrink-0 items-center justify-center rounded-l-md text-sm font-medium text-slate-100">
           <img
             src={blog.ogImage.url}
             alt="blog"

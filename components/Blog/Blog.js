@@ -1,7 +1,7 @@
 import React from "react";
 
 const Blog = ({ readingTime, title, description, date, ogImage, content }) => (
-  <div className="flex flex-col items-center justify-center text-white container max-w-2xl m-auto px-4">
+  <div className="flex flex-col items-center justify-center text-slate-100 container max-w-2xl m-auto px-4">
     <div className="flex flex-col space-y-2">
       <span className="text-2xl font-bold">{title}</span>
       <span className="text-sm text-gray-300">Published on {date}</span>

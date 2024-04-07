@@ -48,7 +48,7 @@ function About() {
     <Layout>
       <div>
         <div className="container mx-auto pt-4 md:pt-12 md:px-12 lg:pt-24 lg:px-24">
-          <h1 className="text-white text-4xl p-4">
+          <h1 className="text-slate-100 text-4xl p-4">
             <strong className="purple">My Recent Blogs</strong>
           </h1>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
@@ -66,12 +66,12 @@ function About() {
           </div>
         </div>
 
-        <div className="flex w-full justify-center text-center text-white p-8">
+        <div className="flex w-full justify-center text-center text-slate-100 p-8">
           <a
             href={mediumURL}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center rounded bg-transparent border-white text-white px-2 py-2 font-semibold ring-1 ring-inset ring-white"
+            className="flex items-center rounded bg-transparent border-white text-slate-100 px-2 py-2 font-semibold ring-1 ring-inset ring-white"
           >
             <ArrowRightCircleIcon className="h-8 mr-2" />
             <span>View More on Medium</span>

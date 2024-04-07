@@ -4,24 +4,19 @@ import styles from "./Techstack.module.css";
 function Techstack() {
   return (
     <div>
-      <h1 className="text-white text-4xl pb-4">
-        <strong className="purple">Skills </strong>
-      </h1>
       {skills.map((item, idx) => {
         return (
-          <div className="text-white mb-3" key={idx}>
+          <div className="text-slate-100 mb-3" key={idx}>
             <strong>{item.category}</strong>
-            <div className="mt-3 grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 grid-flow-row gap-4">
+            <div className="mt-2 grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 md:gap-x-2 md:gap-y-1">
               {item.items.map((val, idx) => (
                 <div
                   key={idx}
-                  className={`${styles["tech-icons"]} mx-2 py-6 md:mx-6 md:p-6 text-white opacity-90 border overflow-hidden rounded-md`}
+                  className={`${styles["tech-icons"]} text-slate-100 opacity-90`}
                 >
-                  <div className="flex justify-center text-xl md:text-3xl lg:text-4xl align-middle text-center h-full">
-                    <val.icon />
-                  </div>
-                  <div className="flex justify-center">
-                    <span className="text-sm">{val.name}</span>
+                  <div className="flex justify-center items-center p-2">
+                    <val.icon size={20} />
+                    <span className="ml-1 text-sm">{val.name}</span>
                   </div>
                 </div>
               ))}

@@ -4,7 +4,7 @@ import Link from "next/link";
 function AboutCard() {
   return (
     <div>
-      <blockquote className="text-white">
+      <blockquote className="text-slate-200">
         <p className="text-left">
           Hi Everyone, I am{" "}
           <strong className="gradient-color">Frank Lee (Shenggui Li)</strong>{" "}

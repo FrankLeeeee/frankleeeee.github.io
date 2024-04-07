@@ -1,4 +1,5 @@
 import { AiFillGithub, AiOutlineNodeCollapse } from "react-icons/ai";
+import { BsBox } from "react-icons/bs";
 import { FaLinkedinIn, FaAws } from "react-icons/fa";
 import { BsMedium } from "react-icons/bs";
 import {
@@ -163,8 +164,8 @@ export const skills = [
         icon: SiNextdotjs,
       },
       {
-        name: "Micro-frontend",
-        icon: MdOutlineWeb,
+        name: "MicroApp",
+        icon: BsBox,
       },
       {
         name: "Cypress",
