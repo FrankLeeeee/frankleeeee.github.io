@@ -3,6 +3,8 @@ import Techstack from "../components/Techstack";
 import Aboutcard from "../components/AboutCard";
 import Layout from "../components/Layout";
 import Section from "../components/Section";
+import NewsList from "../components/NewsList";
+import news from "../data/news";
 
 function About() {
   return (
@@ -18,6 +20,10 @@ function About() {
             />
           </div>
         </div>
+
+        <Section title="News">
+          <NewsList data={news} />
+        </Section>
 
         <Section title="Skills">
           <Techstack />

@@ -1,4 +1,4 @@
-import { skills } from "../../data";
+import { skills } from "../../data/data";
 import styles from "./Techstack.module.css";
 
 function Techstack() {
