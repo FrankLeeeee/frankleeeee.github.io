@@ -24,12 +24,11 @@ const news = [
       <span>
         released{" "}
         <a
-          className="text-blue-400"
           href="https://github.com/hpcaitech/Open-Sora"
           target="_blank"
           rel="noreferrer"
         >
-          the Open-Sora project V1,
+          <span className="text-blue-400">the Open-Sora project V1,</span>
         </a>
         , congratulations to{" "}
         <a
