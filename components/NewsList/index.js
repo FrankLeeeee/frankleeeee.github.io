@@ -1,7 +1,5 @@
-import news from "../../data/news";
-
-const NewsList = ({ keep_recent = 10 }) => {
-  const data = news.slice(0, keep_recent);
+const NewsList = ({ data, keep_recent = 10 }) => {
+  data = data.slice(0, keep_recent);
 
   return (
     <ul className="list-disc list-inside">

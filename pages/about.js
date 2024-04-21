@@ -22,7 +22,7 @@ function About() {
         </div>
 
         <Section title="News">
-          <NewsList />
+          <NewsList data={news} />
         </Section>
 
         <Section title="Skills">
