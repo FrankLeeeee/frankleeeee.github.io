@@ -1,4 +1,4 @@
-import { publications } from "../../data";
+import { publications } from "../../data/data";
 
 function Techstack() {
   return (
