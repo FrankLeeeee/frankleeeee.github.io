@@ -3,8 +3,8 @@ const NewsList = ({ data, keep_recent = 10 }) => {
   return (
     <ul className="list-disc list-inside">
       {data.map((item, idx) => (
-        <li className="text-slate-100" key={idx}>
-          {item.date}: {item.emoji} <div>{item.text()}</div>
+        <li className="text-slate-100 flex" key={idx}>
+          [{item.date}]&nbsp;&nbsp;{item.emoji}&nbsp;{item.text()}
         </li>
       ))}
     </ul>
