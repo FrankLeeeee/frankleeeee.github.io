@@ -29,8 +29,13 @@ const news = [
           target="_blank"
           rel="noreferrer"
         >
-          <span className="text-blue-400">the Open-Sora project V1,</span>
+          <span className="text-blue-400">the Open-Sora project V1&nbsp;</span>
         </a>
+        <img
+          src="https://img.shields.io/github/stars/hpcaitech/Open-Sora?style=social"
+          alt="star-badge"
+          className="inline"
+        ></img>
         , congratulations to{" "}
         <a
           className="text-blue-400"
@@ -84,6 +89,39 @@ const news = [
           rel="noreferrer"
         >
           Prof Zhang Tianwei.
+        </a>
+        .
+      </span>
+    ),
+  },
+  {
+    date: "2024-01",
+    emoji: "🚀",
+    text: () => (
+      <span>
+        released{" "}
+        <a
+          className="text-blue-400"
+          href="https://github.com/hpcaitech/SwiftInfer"
+          target="_blank"
+          rel="noreferrer"
+        >
+          SwiftInfer
+        </a>
+        &nbsp;
+        <img
+          src="https://img.shields.io/github/stars/hpcaitech/SwiftInfer?style=social"
+          alt="star-badge"
+          className="inline"
+        ></img>
+        , a TensorRT implementation of&nbsp;
+        <a
+          className="text-blue-400"
+          href="https://github.com/mit-han-lab/streaming-llm"
+          target="_blank"
+          rel="noreferrer"
+        >
+          StreamingLLM
         </a>
         .
       </span>
