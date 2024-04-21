@@ -2,7 +2,7 @@ const news = [
   {
     date: "2024-04",
     emoji: "🎉",
-    text: (
+    text: () => (
       <span>
         was awarded the prestigious{" "}
         <a
@@ -20,16 +20,16 @@ const news = [
   {
     date: "2024-03",
     emoji: "🎥",
-    text: (
+    text: () => (
       <span>
         released{" "}
         <a
-          className="text-blue-400"
+          className="!text-blue-400 underline"
           href="https://github.com/hpcaitech/Open-Sora"
           target="_blank"
           rel="noreferrer"
         >
-          the Open-Sora project V1,
+          <span className="!text-blue-400">the Open-Sora project V1,</span>
         </a>
         , congratulations to{" "}
         <a
@@ -65,7 +65,7 @@ const news = [
   {
     date: "2024-03",
     emoji: "🎉",
-    text: (
+    text: () => (
       <span>
         received an PhD offer from Nanyang Technological University. Will join{" "}
         <a
