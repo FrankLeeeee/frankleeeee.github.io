@@ -38,22 +38,10 @@ export default function NavBar() {
                   About
                 </Link>
                 <Link
-                  href="/publications "
-                  className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-slate-100 "
-                >
-                  Publications
-                </Link>
-                <Link
                   href="/blogs"
                   className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-slate-100 "
                 >
                   Blogs
-                </Link>
-                <Link
-                  href="/articles"
-                  className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-slate-100 "
-                >
-                  Articles
                 </Link>
                 <Link
                   href="https://github.com/FrankLeeeee?tab=repositories"
@@ -93,13 +81,6 @@ export default function NavBar() {
                 className="block border-l-4 border-b py-2 pl-3 pr-4 text-base font-medium text-slate-100 hover:bg-white hover:text-black"
               >
                 About
-              </Disclosure.Button>
-              <Disclosure.Button
-                as={Link}
-                href="/publications"
-                className="block border-l-4 border-b py-2 pl-3 pr-4 text-base font-medium text-slate-100 hover:bg-white hover:text-black"
-              >
-                Publications
               </Disclosure.Button>
               <Disclosure.Button
                 as={Link}

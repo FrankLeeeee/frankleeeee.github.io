@@ -6,6 +6,9 @@ import Section from "../components/Section";
 import NewsList from "../components/NewsList";
 import news from "../data/news";
 import skills from "../data/skills";
+import PublicationList from "../components/PublicationList";
+import { publications } from "../data/publications";
+import GoogleScholarButton from "../components/GoogleScholarButton";
 
 function About() {
   return (
@@ -24,6 +27,11 @@ function About() {
 
         <Section title="News">
           <NewsList data={news} />
+        </Section>
+
+        <Section title="Selected Publications">
+          <PublicationList data={publications} />
+          <GoogleScholarButton url="https://scholar.google.com/citations?user=XuwmCz4AAAAJ&hl=en" />
         </Section>
 
         <Section title="Skills">

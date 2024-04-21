@@ -4,7 +4,7 @@ const NewsList = ({ data, keep_recent = 10 }) => {
   return (
     <ul className="list-disc list-inside">
       {data.map((item, idx) => (
-        <li className="text-slate-100" key={idx}>
+        <li className="text-slate-300" key={idx}>
           [{item.date}]&nbsp;&nbsp;{item.emoji}&nbsp;{item.text()}
         </li>
       ))}

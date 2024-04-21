@@ -2,7 +2,8 @@ import React from "react";
 import BlogItem from "../../components/Blog/BlogItem";
 import api from "../../lib/lib";
 import Layout from "../../components/Layout";
-import GridLayout from "../../components/Blog/GridLayout";
+import BlogList from "../../components/Blog/BlogList";
+import Section from "../../components/Section";
 
 export const getStaticProps = async () => {
   const blogs = api.getAllBlogs([
@@ -22,16 +23,18 @@ export const getStaticProps = async () => {
 };
 
 // thoughts are personal blogs which are non-technical
-const BlogList = ({ blogs }) => {
+const BlogPage = ({ blogs }) => {
   return (
     <Layout>
-      <GridLayout title="My Blogs">
-        {blogs.map((blog) => (
-          <BlogItem key={blog.slug} blog={blog} />
-        ))}
-      </GridLayout>
+      <Section title="My Blogs">
+        <BlogList>
+          {blogs.map((blog) => (
+            <BlogItem key={blog.slug} blog={blog} />
+          ))}
+        </BlogList>
+      </Section>
     </Layout>
   );
 };
 
-export default BlogList;
+export default BlogPage;
