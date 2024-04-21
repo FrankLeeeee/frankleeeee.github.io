@@ -1,9 +1,7 @@
-import { publications } from "../../data/data";
-
-function Techstack() {
+function Techstack({ data }) {
   return (
     <div>
-      {publications.map((publication, idx) => {
+      {data.map((publication, idx) => {
         return (
           <div className="text-slate-300 mb-3" key={idx}>
             <strong>{publication.category}</strong>
