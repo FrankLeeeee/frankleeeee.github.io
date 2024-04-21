@@ -36,3 +36,4 @@ Server/config.js
 
 # mac cache
 .DS_Store
+out/
