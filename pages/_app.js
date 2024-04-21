@@ -1,5 +1,5 @@
 import "../styles/globals.css";
-import { Raleway } from "@next/font/google";
+import { Raleway } from "next/font/google";
 import Head from "next/head";
 import Script from "next/script";
 
