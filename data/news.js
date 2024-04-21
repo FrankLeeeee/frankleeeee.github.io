@@ -72,7 +72,7 @@ const news = [
     emoji: "🎉",
     text: () => (
       <span>
-        received an PhD offer from Nanyang Technological University. Will join{" "}
+        received a PhD offer from Nanyang Technological University. Will join{" "}
         <a
           className="text-blue-400"
           href="https://www.ntu.edu.sg/s-lab"

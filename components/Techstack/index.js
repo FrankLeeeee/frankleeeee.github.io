@@ -1,10 +1,9 @@
-import { skills } from "../../data/data";
 import styles from "./Techstack.module.css";
 
-function Techstack() {
+function Techstack({ data }) {
   return (
     <div>
-      {skills.map((item, idx) => {
+      {data.map((item, idx) => {
         return (
           <div className="text-slate-100 mb-3" key={idx}>
             <strong>{item.category}</strong>

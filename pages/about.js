@@ -5,6 +5,7 @@ import Layout from "../components/Layout";
 import Section from "../components/Section";
 import NewsList from "../components/NewsList";
 import news from "../data/news";
+import skills from "../data/skills";
 
 function About() {
   return (
@@ -26,7 +27,7 @@ function About() {
         </Section>
 
         <Section title="Skills">
-          <Techstack />
+          <Techstack data={skills} />
         </Section>
 
         <Section title="GitHub">
