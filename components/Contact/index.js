@@ -1,5 +1,5 @@
 import React from "react";
-import { contacts } from "../../data";
+import { contacts } from "../../data/data";
 import Link from "next/link";
 
 function Contact() {
