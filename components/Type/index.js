@@ -1,5 +1,4 @@
 import React from "react";
-import Typewriter from "typewriter-effect";
 import { TypeAnimation } from "react-type-animation";
 
 function Type() {
