@@ -16,7 +16,7 @@ function About() {
       <div>
         <Section title="About Me">
           <div className="flex flex-col">
-            <div className="flex flex-col md:justify-between md:flex-row flex-wrap">
+            <div className="flex flex-col lg:justify-between lg:flex-row">
               <Aboutcard />
               <img
                 src="/assets/about.png"

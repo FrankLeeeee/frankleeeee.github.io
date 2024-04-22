@@ -1,9 +1,13 @@
 import { AiFillGithub } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
-import { BsMedium } from "react-icons/bs";
 import { SiGooglescholar } from "react-icons/si";
+import { BsTwitterX } from "react-icons/bs";
 
-export const contacts = [
+const contacts = [
+  {
+    url: "https://twitter.com/frankkklee",
+    icon: BsTwitterX,
+  },
   {
     url: "https://github.com/FrankLeeeee",
     icon: AiFillGithub,
@@ -16,8 +20,6 @@ export const contacts = [
     url: "https://sg.linkedin.com/in/shenggui-li",
     icon: FaLinkedinIn,
   },
-  {
-    url: "https://frankleeeee.medium.com/",
-    icon: BsMedium,
-  },
 ];
+
+export default contacts;
