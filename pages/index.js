@@ -7,13 +7,13 @@ function App() {
   return (
     <Layout>
       <div id="home">
-        <div className="container mx-auto pt-12 md:pt-24 md:px-12 lg:pt-40 lg:px-24">
-          <div className="flex flex-col justify-start md:flex-row md:justify-between flex-wrap">
+        <div className="text-center">
+          <div className="flex flex-col">
             <Hello />
             <img
               src="/assets/home-main.svg"
               alt="home pic"
-              className="max-h-48 md:max-h-72 lg:max-h-96"
+              className="max-h-48 md:max-h-64 lg:max-h-80 mt-8"
             />
           </div>
         </div>
