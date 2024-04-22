@@ -2,6 +2,7 @@ import React from "react";
 import Layout from "../components/Layout";
 import Contact from "../components/Contact";
 import Hello from "../components/Hello";
+import contacts from "../data/contacts";
 
 function App() {
   return (
@@ -18,7 +19,7 @@ function App() {
           </div>
         </div>
         <div className="mt-8 p-12 mb-16">
-          <Contact />
+          <Contact data={contacts} />
         </div>
       </div>
     </Layout>
