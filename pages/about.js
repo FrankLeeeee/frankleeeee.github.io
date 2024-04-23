@@ -1,4 +1,3 @@
-import Github from "../components/Github";
 import Techstack from "../components/Techstack";
 import Aboutcard from "../components/AboutCard";
 import Layout from "../components/Layout";
@@ -13,7 +12,7 @@ import GoogleScholarButton from "../components/GoogleScholarButton";
 function About() {
   return (
     <Layout>
-      <div>
+      <div className="pb-12">
         <Section title="About Me">
           <div className="flex flex-col">
             <div className="flex flex-col lg:justify-between lg:flex-row">
@@ -38,10 +37,6 @@ function About() {
 
         <Section title="Skills">
           <Techstack data={skills} />
-        </Section>
-
-        <Section title="GitHub">
-          <Github />
         </Section>
       </div>
     </Layout>
