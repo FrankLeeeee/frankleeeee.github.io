@@ -6,8 +6,10 @@ import NewsList from "../components/NewsList";
 import news from "../data/news";
 import skills from "../data/skills";
 import PublicationList from "../components/PublicationList";
-import { publications } from "../data/publications";
+import publications from "../data/publications";
+import honours from "../data/honours";
 import GoogleScholarButton from "../components/GoogleScholarButton";
+import HonourList from "../components/HonourList";
 
 function About() {
   return (
@@ -33,6 +35,10 @@ function About() {
         <Section title="Selected Publications">
           <PublicationList data={publications} />
           <GoogleScholarButton url="https://scholar.google.com/citations?user=XuwmCz4AAAAJ&hl=en" />
+        </Section>
+
+        <Section title="Honours and Awards">
+          <HonourList data={honours} />
         </Section>
 
         <Section title="Skills">
