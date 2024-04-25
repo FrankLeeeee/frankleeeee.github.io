@@ -1,4 +1,4 @@
-export const publications = [
+const publications = [
   {
     category: "Efficient & Large Scale Machine Learning",
     items: [
@@ -61,3 +61,5 @@ export const publications = [
     ],
   },
 ];
+
+export default publications;
