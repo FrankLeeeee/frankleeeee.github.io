@@ -21,7 +21,7 @@ export default function MyApp({ Component, pageProps }) {
         gtag('config', 'G-6040R6MSMR');`}
       </Script>
       <Head>
-        <title>Frank Lee (Shenggui Li) | Strive for Excellence</title>
+        <title>Shenggui Li</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <Component {...pageProps} />
