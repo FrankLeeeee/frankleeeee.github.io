@@ -7,8 +7,8 @@ function Techstack({ data }) {
             <strong>{publication.category}</strong>
             <div className="mt-3 ml-8 my-4 flex flex-col">
               {publication.items.map((val, idx) => (
-                <ul className="list-disc my-2">
-                  <li key={idx}>
+                <ul className="list-disc my-2" key={idx}>
+                  <li>
                     <span>
                       <a
                         href={val.url}

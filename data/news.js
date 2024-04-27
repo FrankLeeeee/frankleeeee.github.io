@@ -2,7 +2,7 @@ const news = [
   {
     date: "2024-04",
     emoji: "🎉",
-    text: () => (
+    text: (
       <span>
         was awarded the prestigious{" "}
         <a
@@ -20,7 +20,7 @@ const news = [
   {
     date: "2024-03",
     emoji: "🎥",
-    text: () => (
+    text: (
       <span>
         released{" "}
         <a
@@ -70,7 +70,7 @@ const news = [
   {
     date: "2024-03",
     emoji: "🎉",
-    text: () => (
+    text: (
       <span>
         received a PhD offer from Nanyang Technological University. Will join{" "}
         <a
@@ -97,7 +97,7 @@ const news = [
   {
     date: "2024-01",
     emoji: "🚀",
-    text: () => (
+    text: (
       <span>
         released{" "}
         <a

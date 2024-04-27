@@ -1,10 +1,11 @@
 import React from "react";
-import Link from "next/link";
+import ProjectList from "../ProjectList";
+import projects from "../../data/projects";
 
 function AboutCard() {
   return (
-    <div>
-      <blockquote className="text-slate-300">
+    <div className="text-slate-300">
+      <blockquote>
         <p className="text-left">
           Hi Everyone, I am{" "}
           <strong className="gradient-color">Shenggui Li (Frank)</strong>. I am
@@ -23,20 +24,12 @@ function AboutCard() {
           During my undergraduate study, I had the privilege to spend wonderful
           2 years on the NTU HPC Team and we won the overall 🥈 2nd place in the
           student cluster competition of ISC21.
-          <br />
-          <br /> I am participating in exciting projects such as &nbsp;
-          <Link href="https://github.com/hpcaitech/ColossalAI" target="_blank">
-            <strong className="gradient-color">Colossal-AI </strong>
-          </Link>
-          .&nbsp;
-          <img
-            src="https://img.shields.io/github/stars/hpcaitech/ColossalAI?style=social"
-            alt="star-badge"
-            className="inline"
-          ></img>
-          <br />
-          <br />
         </p>
+      </blockquote>
+
+      <blockquote className="mt-2">
+        I am involved in several interesting projects:
+        <ProjectList data={projects} />
       </blockquote>
     </div>
   );
