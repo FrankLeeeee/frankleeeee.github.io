@@ -4,7 +4,7 @@ import projects from "../../data/projects";
 
 function AboutCard() {
   return (
-    <div className="text-slate-300">
+    <div className="text-slate-400">
       <blockquote>
         <p className="text-justify">
           Hi, I am <strong className="gradient-color">Shenggui Li</strong>, you

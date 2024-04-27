@@ -27,19 +27,19 @@ export default function NavBar() {
                 {/* only show this tabs when size is > md */}
                 <Link
                   href="/"
-                  className="inline-flex items-center px-1 pt-1 text-sm font-medium text-slate-100"
+                  className="inline-flex items-center px-1 pt-1 text-sm font-medium text-slate-200"
                 >
                   Home
                 </Link>
                 <Link
                   href="/about"
-                  className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-slate-100"
+                  className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-slate-200"
                 >
                   About
                 </Link>
                 <Link
                   href="/blogs"
-                  className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-slate-100 "
+                  className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-slate-200 "
                 >
                   Blogs
                 </Link>
@@ -64,21 +64,21 @@ export default function NavBar() {
               <Disclosure.Button
                 as={Link}
                 href="/"
-                className="block border-l-4 border-b py-2 pl-3 pr-4 text-base font-medium text-slate-100 hover:bg-white hover:text-black"
+                className="block border-l-4 border-b py-2 pl-3 pr-4 text-base font-medium text-slate-200 hover:bg-white hover:text-black"
               >
                 Home
               </Disclosure.Button>
               <Disclosure.Button
                 as={Link}
                 href="/about"
-                className="block border-l-4 border-b py-2 pl-3 pr-4 text-base font-medium text-slate-100 hover:bg-white hover:text-black"
+                className="block border-l-4 border-b py-2 pl-3 pr-4 text-base font-medium text-slate-200 hover:bg-white hover:text-black"
               >
                 About
               </Disclosure.Button>
               <Disclosure.Button
                 as={Link}
                 href="/blogs"
-                className="block border-l-4 border-b py-2 pl-3 pr-4 text-base font-medium text-slate-100 hover:bg-white hover:text-black"
+                className="block border-l-4 border-b py-2 pl-3 pr-4 text-base font-medium text-slate-200 hover:bg-white hover:text-black"
               >
                 Blogs
               </Disclosure.Button>

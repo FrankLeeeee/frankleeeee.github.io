@@ -3,7 +3,7 @@ function Techstack({ data }) {
     <div>
       {data.map((publication, idx) => {
         return (
-          <div className="text-slate-300 mb-3" key={idx}>
+          <div className="text-slate-400 mb-3" key={idx}>
             <strong>{publication.category}</strong>
             <div className="mt-3 ml-8 my-4 flex flex-col">
               {publication.items.map((val, idx) => (
