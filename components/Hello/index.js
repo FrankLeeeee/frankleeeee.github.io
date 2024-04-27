@@ -13,7 +13,7 @@ export default function Hello() {
 
       <h1>
         I'm
-        <strong className="gradient-color"> Shenggui (Frank) Li </strong>
+        <strong className="gradient-color"> Shenggui Li </strong>
       </h1>
       <div>
         <Type />

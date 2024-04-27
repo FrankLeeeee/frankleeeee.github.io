@@ -43,13 +43,6 @@ export default function NavBar() {
                 >
                   Blogs
                 </Link>
-                <Link
-                  href="https://github.com/FrankLeeeee?tab=repositories"
-                  target="_blank"
-                  className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-slate-100 "
-                >
-                  Projects
-                </Link>
               </div>
               <div className="flex items-center md:hidden">
                 {/* Mobile menu button */}
@@ -88,14 +81,6 @@ export default function NavBar() {
                 className="block border-l-4 border-b py-2 pl-3 pr-4 text-base font-medium text-slate-100 hover:bg-white hover:text-black"
               >
                 Blogs
-              </Disclosure.Button>
-              <Disclosure.Button
-                as={Link}
-                href="https://github.com/FrankLeeeee?tab=repositories"
-                target="_blank"
-                className="block border-l-4 border-b py-2 pl-3 pr-4 text-base font-medium text-slate-100 hover:bg-white hover:text-black"
-              >
-                Projects
               </Disclosure.Button>
             </div>
           </Disclosure.Panel>

@@ -2,8 +2,13 @@ import { AiFillGithub } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
 import { SiGooglescholar } from "react-icons/si";
 import { BsTwitterX } from "react-icons/bs";
+import { MdOutlineEmail } from "react-icons/md";
 
 const contacts = [
+  {
+    url: "mailto: somerlee.9@gmail.com",
+    icon: MdOutlineEmail,
+  },
   {
     url: "https://twitter.com/frankkklee",
     icon: BsTwitterX,
