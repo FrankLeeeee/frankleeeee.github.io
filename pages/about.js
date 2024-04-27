@@ -10,6 +10,8 @@ import publications from "../data/publications";
 import honours from "../data/honours";
 import GoogleScholarButton from "../components/GoogleScholarButton";
 import HonourList from "../components/HonourList";
+import ProjectList from "../components/ProjectList";
+import projects from "../data/projects";
 
 function About() {
   return (
