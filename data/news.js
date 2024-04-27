@@ -4,7 +4,7 @@ const news = [
     emoji: "🎉",
     text: (
       <span>
-        was awarded the prestigious{" "}
+        awarded the prestigious{" "}
         <a
           className="text-blue-400"
           href="https://www.a-star.edu.sg/Scholarships/for-graduate-studies/a-star-cis-scholarship"
