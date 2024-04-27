@@ -18,7 +18,7 @@ function App() {
             />
           </div>
         </div>
-        <div className="mt-8 p-12 mb-16">
+        <div className="mt-8 mb-16">
           <Contact data={contacts} />
         </div>
       </div>
