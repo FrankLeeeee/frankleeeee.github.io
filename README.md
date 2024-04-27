@@ -1,27 +1,10 @@
-# frankleeeee.github.io
+# 🏝 My Home Page
 
-My personal website.
+## 📍 Overview
 
-Techstack:
+This repository contains the source code for my personal website.
 
-1. React
-2. Next.js
-3. Tailwind
-4. React-icons
-
-## Credit
-
-This is modified from [soumyajit4419](https://github.com/soumyajit4419)'s [portfolio page](https://github.com/soumyajit4419/Portfolio).
-
-Some major changes include:
-
-1. replaced `create-react-app` with `next.js`
-2. replaced `bootstrap` with `tailwind`
-3. replaced `react-router` with `next.js` dynamic routing
-4. updated styles
-   5. added github actions to auto-deploy to github pages
-
-## Get Started
+## 🚀 Get Started
 
 **Development**
 
@@ -34,5 +17,8 @@ yarn dev
 
 ```bash
 yarn build
-yarn export
 ```
+
+## 🪄 Acknowledgement
+
+This web was originally modified from [soumyajit4419](https://github.com/soumyajit4419)'s [portfolio page](https://github.com/soumyajit4419/Portfolio) and it is now vastly different.
