@@ -72,23 +72,15 @@ const news = [
     emoji: "🎉",
     text: (
       <span>
-        received a PhD offer from Nanyang Technological University. Will join{" "}
-        <a
-          className="text-blue-400"
-          href="https://www.ntu.edu.sg/s-lab"
-          target="_blank"
-          rel="noreferrer"
-        >
-          NTU S-Lab
-        </a>{" "}
-        in August 2024 under supervision of{" "}
+        admitted into the 2024 Fall PhD programme of NTU under the supervision
+        of{" "}
         <a
           className="text-blue-400"
           href="https://personal.ntu.edu.sg/tianwei.zhang/"
           target="_blank"
           rel="noreferrer"
         >
-          Prof Zhang Tianwei.
+          Prof Tianwei Zhang
         </a>
         .
       </span>

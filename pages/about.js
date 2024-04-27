@@ -10,23 +10,16 @@ import publications from "../data/publications";
 import honours from "../data/honours";
 import GoogleScholarButton from "../components/GoogleScholarButton";
 import HonourList from "../components/HonourList";
-import ProjectList from "../components/ProjectList";
-import projects from "../data/projects";
+import Profile from "../components/Profile";
 
 function About() {
   return (
     <Layout>
       <div className="pb-12">
         <Section title="About Me">
-          <div className="flex flex-col">
-            <div className="flex flex-col lg:justify-between lg:flex-row">
-              <Aboutcard />
-              <img
-                src="/assets/about.png"
-                alt="about"
-                className="my-8 md:mt-0 object-scale-down max-h-48 md:max-h-64 lg:max-h-96"
-              />
-            </div>
+          <div className="flex space-y-8 flex-col lg:space-y-0 lg:justify-between lg:flex-row-reverse">
+            <Profile />
+            <Aboutcard />
           </div>
         </Section>
 
