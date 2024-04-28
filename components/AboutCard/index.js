@@ -106,8 +106,8 @@ function AboutCard() {
           >
             Colossal-AI
           </a>
-          . During my undergraduate study, I had the privilege to spend
-          wonderful 2 years on the{" "}
+          . During my undergraduate study, I had the privilege to spend a
+          wonderful year on the{" "}
           <a
             className="text-blue-400"
             href="https://ntuhpc.org/"
