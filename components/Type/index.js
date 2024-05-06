@@ -6,13 +6,13 @@ function Type() {
     <TypeAnimation
       sequence={[
         // Same substring at the start will only be typed out once, initially
+        "Machine Learning",
+        1000,
+        "HPC",
+        1000,
+        "Open-Source",
+        1000,
         "Full-stack",
-        1000,
-        "ML Engineer",
-        1000,
-        "HPC Engineer",
-        1000,
-        "OSS Developer",
         1000,
       ]}
       wrapper="span"
