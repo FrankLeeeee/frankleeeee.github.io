@@ -3,6 +3,7 @@ import Layout from "../components/Layout";
 import Contact from "../components/Contact";
 import Hello from "../components/Hello";
 import contacts from "../data/contacts";
+import Fade from "../components/Animations/Fade";
 
 function App() {
   return (
@@ -10,7 +11,10 @@ function App() {
       <div id="home">
         <div className="text-center">
           <div className="flex flex-col">
-            <Hello />
+            <Fade>
+              <Hello />
+            </Fade>
+
             <img
               src="/assets/home-main.svg"
               alt="home pic"
