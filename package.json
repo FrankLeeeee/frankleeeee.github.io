@@ -29,7 +29,8 @@
     "remark-code-titles": "^0.1.2",
     "remark-external-links": "^9.0.1",
     "remark-images": "^4.0.0",
-    "remark-slug": "^7.0.1"
+    "remark-slug": "^7.0.1",
+    "tailwindcss-animated": "^1.0.1"
   },
   "scripts": {
     "dev": "next dev",
