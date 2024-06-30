@@ -8,7 +8,7 @@ import Fade from "../components/Animations/Fade";
 function App() {
   return (
     <Layout>
-      <div id="home">
+      <div id="home" className="mt-12">
         <div className="text-center">
           <div className="flex flex-col">
             <Fade>
