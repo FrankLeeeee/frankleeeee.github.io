@@ -1,6 +1,6 @@
 const news = [
   {
-    date: "2024-03",
+    date: "2024-06",
     emoji: "🎥",
     text: (
       <span>
