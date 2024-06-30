@@ -1,5 +1,29 @@
 const news = [
   {
+    date: "2024-03",
+    emoji: "🎥",
+    text: (
+      <span>
+        released{" "}
+        <a
+          className="text-blue-400"
+          href="https://github.com/hpcaitech/Open-Sora"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <span className="text-blue-400">Open-Sora V1.2 &nbsp;</span>
+        </a>
+        <img
+          src="https://img.shields.io/github/stars/hpcaitech/Open-Sora?style=social"
+          alt="star-badge"
+          className="inline"
+        ></img>
+        &nbsp; with features such as 3D-VAE, rectified flow, and score conditio
+        and better video generation quality!
+      </span>
+    ),
+  },
+  {
     date: "2024-04",
     emoji: "🎉",
     text: (
@@ -29,7 +53,7 @@ const news = [
           target="_blank"
           rel="noreferrer"
         >
-          <span className="text-blue-400">the Open-Sora project V1&nbsp;</span>
+          <span className="text-blue-400">Open-Sora V1.0 &nbsp;</span>
         </a>
         <img
           src="https://img.shields.io/github/stars/hpcaitech/Open-Sora?style=social"
