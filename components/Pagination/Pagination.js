@@ -10,7 +10,6 @@ export default function Pagination({
   goToPageByIndex,
 }) {
   // compute the page numbers to display,
-  // we show the current page and its siblings and the first page and last page
   // the page number should start from 1
   const pageNumbers = [];
   for (
@@ -49,10 +48,8 @@ export default function Pagination({
         </button>
       </div>
 
-      {/* Show page numbers here, we show:
-        1. the current page index and its sibligns (index starts from 1)
-        2. the first page index and last page index
-      */}
+      {/* Show page numbers here, we show the current page index and its sibligns (index starts from 1)
+       */}
       <div className="hidden md:-mt-px md:flex">
         {
           // show current page and its siblings
