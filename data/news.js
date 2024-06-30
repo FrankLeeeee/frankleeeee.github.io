@@ -28,14 +28,14 @@ const news = [
     emoji: "🎉",
     text: (
       <span>
-        One paper accepted for ICML 2024, congratulations to
+        One paper accepted for ICML 2024, congratulations to&nbsp;
         <a
           className="text-blue-400"
           href="https://nonvolatilememory.github.io/"
           target="_blank"
           rel="noreferrer"
         >
-          <span className="text-blue-400">Cunxiao</span>
+          <span className="text-blue-400">Cunxiao Du</span>
         </a>
         !
       </span>
