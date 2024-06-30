@@ -1,6 +1,6 @@
 const publications = [
   {
-    category: "Efficient & Large Scale Machine Learning",
+    category: "Efficient and Scalable Training",
     items: [
       {
         name: "Colossal-AI: A Unified Deep Learning System For Large-Scale Parallel Training",
@@ -14,7 +14,7 @@ const publications = [
           "Boxiang Wang",
           "Yang You",
         ],
-        url: "#",
+        url: "https://dl.acm.org/doi/10.1145/3605573.3605613",
         publisher:
           "Proceedings of the 2023 International Conference for Parallel Processing (ICPP 2023)",
       },
@@ -45,6 +45,30 @@ const publications = [
         url: "https://ieeexplore.ieee.org/abstract/document/9940581",
         publisher:
           "IEEE Transactions on Parallel and Distributed Systems (TPDS 2023)",
+      },
+    ],
+  },
+  {
+    category: "Efficient Inference",
+    items: [
+      {
+        name: "Glide with a cape: A low-hassle method to accelerate speculative decoding",
+        authors: [
+          "Cunxiao Du",
+          "Jing Jiang",
+          "Xu Yuanchen",
+          "Jiawei Wu",
+          "Sicheng Yu",
+          "Yongqi Li",
+          "Shenggui Li",
+          "Kai Xu",
+          "Liqiang Nie",
+          "Zhaopeng Tu",
+          "Yang You",
+        ],
+        url: "https://arxiv.org/abs/2402.02082",
+        publisher:
+          "Proceedings of the 2024 International Conference on Machine Learning (ICML 2024)",
       },
     ],
   },

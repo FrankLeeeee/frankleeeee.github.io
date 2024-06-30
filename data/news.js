@@ -24,6 +24,24 @@ const news = [
     ),
   },
   {
+    date: "2024-05",
+    emoji: "🎉",
+    text: (
+      <span>
+        One paper accepted for ICML 2024, congratulations to
+        <a
+          className="text-blue-400"
+          href="https://nonvolatilememory.github.io/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <span className="text-blue-400">Cunxiao</span>
+        </a>
+        !
+      </span>
+    ),
+  },
+  {
     date: "2024-04",
     emoji: "🎉",
     text: (
