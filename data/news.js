@@ -4,7 +4,7 @@ const news = [
     emoji: "🎥",
     text: (
       <span>
-        released{" "}
+        Released{" "}
         <a
           className="text-blue-400"
           href="https://github.com/hpcaitech/Open-Sora"
@@ -46,7 +46,7 @@ const news = [
     emoji: "🎉",
     text: (
       <span>
-        awarded the prestigious{" "}
+        Awarded the prestigious{" "}
         <a
           className="text-blue-400"
           href="https://www.a-star.edu.sg/Scholarships/for-graduate-studies/a-star-cis-scholarship"
@@ -64,7 +64,7 @@ const news = [
     emoji: "🎥",
     text: (
       <span>
-        released{" "}
+        Released{" "}
         <a
           className="text-blue-400"
           href="https://github.com/hpcaitech/Open-Sora"
@@ -114,7 +114,7 @@ const news = [
     emoji: "🎉",
     text: (
       <span>
-        admitted into the 2024 Fall PhD programme of NTU under the supervision
+        Admitted into the 2024 Fall PhD programme of NTU under the supervision
         of{" "}
         <a
           className="text-blue-400"
@@ -133,7 +133,7 @@ const news = [
     emoji: "🚀",
     text: (
       <span>
-        released{" "}
+        Released{" "}
         <a
           className="text-blue-400"
           href="https://github.com/hpcaitech/SwiftInfer"
