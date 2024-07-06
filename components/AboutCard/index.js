@@ -96,8 +96,8 @@ function AboutCard() {
             rel="noreferrer"
           >
             Ring Self-Attention
-          </a>{" "}
-          and{" "}
+          </a>
+          ,{" "}
           <a
             className="text-blue-400"
             href="https://dl.acm.org/doi/10.1145/3605573.3605613"
@@ -105,6 +105,15 @@ function AboutCard() {
             rel="noreferrer"
           >
             Colossal-AI
+          </a>{" "}
+          and{" "}
+          <a
+            className="text-blue-400"
+            href="https://github.com/hpcaitech/Open-Sora"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Open-Sora
           </a>
           . During my undergraduate study, I had the privilege to spend a
           wonderful year on the{" "}
