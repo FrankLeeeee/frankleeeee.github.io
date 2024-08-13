@@ -43,6 +43,14 @@ export default function NavBar() {
                 >
                   Blogs
                 </Link>
+                <Link
+                  href="/assets/cv.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-slate-200 "
+                >
+                  CV
+                </Link>
               </div>
               <div className="flex items-center md:hidden">
                 {/* Mobile menu button */}
@@ -81,6 +89,16 @@ export default function NavBar() {
                 className="block border-l-4 border-b py-2 pl-3 pr-4 text-base font-medium text-slate-200 hover:bg-white hover:text-black"
               >
                 Blogs
+              </Disclosure.Button>
+              <Disclosure.Button
+                as={Link}
+                href="/assets/cv.pdf"
+                alt="alt text"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block border-l-4 border-b py-2 pl-3 pr-4 text-base font-medium text-slate-200 hover:bg-white hover:text-black"
+              >
+                CV
               </Disclosure.Button>
             </div>
           </Disclosure.Panel>
