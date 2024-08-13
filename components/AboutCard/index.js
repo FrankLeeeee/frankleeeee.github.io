@@ -9,16 +9,8 @@ function AboutCard() {
         <p className="text-justify">
           Hi, I am <strong className="gradient-color">Shenggui Li</strong>, you
           can call me <strong className="gradient-color">Frank Lee</strong> as
-          well. I am an incoming PhD student of the 📍
-          <a
-            className="text-blue-400"
-            href="https://www.ntu.edu.sg/s-lab"
-            target="_blank"
-            rel="noreferrer"
-          >
-            S-Lab
-          </a>{" "}
-          in Nanyang Technological University @ Singapore, advised by{" "}
+          well. I am a first-year PhD student at the Nanyang Technological
+          University in Singapore, advised by{" "}
           <a
             className="text-blue-400"
             href="https://personal.ntu.edu.sg/tianwei.zhang/"
@@ -128,6 +120,20 @@ function AboutCard() {
           and we won the overall 🥈 2nd place in the student cluster competition
           of ISC21.
         </p>
+      </blockquote>
+
+      <blockquote className="mt-2">
+        {" "}
+        You can find my 📄 CV{" "}
+        <a
+          className="text-blue-400"
+          href="/assets/cv.pdf"
+          target="_blank"
+          rel="noreferrer"
+        >
+          here
+        </a>
+        .
       </blockquote>
 
       <blockquote className="mt-2">
