@@ -28,6 +28,17 @@ function AboutCard() {
           >
             Prof. Ivor Tsang
           </a>
+          . I am also affliated with{" "}
+          <a
+            className="text-blue-400"
+            href="https://www.a-star.edu.sg/cfar"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <span className="text-blue-400">
+              Singapore A*STAR Center for Frontier AI Research (CFAR)
+            </span>
+          </a>
           . Prior to that, I obtained my 🤓 B.Eng in Computer Science in Nanyang
           Technological University in 2021 advised by{" "}
           <a
@@ -56,7 +67,7 @@ function AboutCard() {
           >
             HPC-AI Lab
           </a>{" "}
-          and a founding member of{" "}
+          and a co-founder of{" "}
           <a
             className="text-blue-400"
             href="https://hpc-ai.com/"
