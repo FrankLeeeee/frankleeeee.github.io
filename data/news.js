@@ -1,5 +1,32 @@
 const news = [
   {
+    date: "2024-08",
+    emoji: "🏫",
+    text: (
+      <span>
+        Started my PhD journey at{" "}
+        <a
+          className="text-blue-400"
+          href="https://www.ntu.edu.sg/computing"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <span className="text-blue-400">NTU CCSD</span>
+        </a>
+        , under the supervision of{" "}
+        <a
+          className="text-blue-400"
+          href="https://personal.ntu.edu.sg/tianwei.zhang/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <span className="text-blue-400">Prof Tianwei Zhang</span>
+        </a>
+        .
+      </span>
+    ),
+  },
+  {
     date: "2024-06",
     emoji: "🎥",
     text: (
