@@ -42,9 +42,7 @@ function About() {
         </Section>
 
         <Section>
-          <div className="flex justify-center">
-            <VisitorCounter />
-          </div>
+          <VisitorCounter />
         </Section>
       </div>
     </Layout>
