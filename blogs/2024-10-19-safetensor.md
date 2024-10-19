@@ -7,7 +7,7 @@ ogImage:
   url: "https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/safetensors/safetensors-logo-light.svg"
 ---
 
-A long time ago, a very simple question came to my mind when I was reading a bunch of Hugging Face's documentation - what does Hugging Face's SafeTensor do? The term "safetensor" appears in many places in the Hugging Face's documentation but people rarely talk about it and discuss its purpose. Recently, there was a security affair which affected a team's model training progress and this prompts me to revisit this question and write this blog. It should be noted that this blog is not a discussion of the affair but rather the technical advocation for the use of safetensors to protect your models, which are the most important assets in the AI era.
+A long time ago, a very simple question came to my mind when I was reading a bunch of Hugging Face's documentation - what does Hugging Face's Safetensor do? The term "Safetensor" appears in many places in the Hugging Face's documentation but people rarely talk about it and discuss its purpose. Recently, there was a security affair which affected a team's model training progress and this prompts me to revisit this question and write this blog. It should be noted that this blog is not a discussion of the affair but rather the technical advocation for the use of safetensors to protect your models, which are the most important assets in the AI era.
 
 ## What's wrong with the current model storage?
 
@@ -97,9 +97,9 @@ setattr(dist, "all_reduce", hijacked_all_reduce)
 
 For example, if you have 2 processes and each process is holidng a tensor `[0, 1, 2, 3]`, the all-reduce operation will sum up the tensors from each process and the result will be `[0, 2, 4, 6]`. However, if the attacker injects the malicious code, the result will be `[2, 4, 6, 8]`.
 
-## How does safetensors solve the problem?
+## How do Safetensors solve the problem?
 
-In the first place, Safetensors does not use `pickle` to serialize and deserialize the state dict object. Instead, it uses a custom serialization method to store the model weights. In this way, the attacker cannot inject arbitrary code into the model weights. Amazingly, Safetensors is still fast as does zero-copy when storing and saving model weights. In simple words, Hugging Face's Safetensors ensures that your model weights files only contain the parameter data and nothing else.
+In the first place, Safetensors do not use `pickle` to serialize and deserialize the state dict object. Instead, it uses a custom serialization method to store the model weights. In this way, the attacker cannot inject arbitrary code into the model weights. Amazingly, Safetensors are still fast as does zero-copy when storing and saving model weights. In simple words, Hugging Face's Safetensors ensure that your model weights files only contain the parameter data and nothing else.
 
 We have also provided some examples of using safetensors to remove the security concerns in the my [blog notes](https://github.com/FrankLeeeee/Blog-Notes/tree/main/2024-10-19-safetensor). For every example which demonstrates the malicious scenario, you just simply add the `--use-safetensor` flag to the command to see the difference.
 
