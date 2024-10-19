@@ -7,6 +7,7 @@ import BlogList from "../../components/Blog/BlogList";
 import Section from "../../components/Section";
 import Fade from "../../components/Animations/Fade";
 import Pagination from "../../components/Pagination/Pagination";
+import Head from "next/head";
 
 export const getStaticProps = async () => {
   const blogs = api.getAllBlogs([
