@@ -9,12 +9,13 @@ const Blog = ({ readingTime, title, description, date, ogImage, content }) => (
     <h4 className="text-sm text-slate-400">Description: {description}</h4>
     <img src={ogImage.url} alt="blog" lazy="loa/ding" />
     <Markdown
+      className="text-justify"
       components={{
         h2: ({ children }) => <h2 className="text-white">{children}</h2>,
         h3: ({ children }) => <h3 className="text-white">{children}</h3>,
         code: ({ children }) => <code className="text-white">{children}</code>,
         a: ({ children, href }) => (
-          <a className="text-white" href={href}>
+          <a className="text-white " href={href}>
             {children}
           </a>
         ),
