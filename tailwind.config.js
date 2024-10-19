@@ -13,5 +13,9 @@ module.exports = {
   theme: {
     extend: {},
   },
-  plugins: [require("@tailwindcss/forms"), require("tailwindcss-animated")],
+  plugins: [
+    require("@tailwindcss/forms"),
+    require("tailwindcss-animated"),
+    require("@tailwindcss/typography"),
+  ],
 };
