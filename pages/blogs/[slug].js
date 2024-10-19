@@ -65,15 +65,17 @@ const BlogPost = ({ readingTime, frontMatter, slug, source }) => {
 
   return (
     <Layout>
-      <Blog
-        readingTime={readingTime}
-        title={frontMatter.title}
-        description={frontMatter.description}
-        date={frontMatter.date}
-        content={source}
-        ogImage={frontMatter.ogImage}
-        slug={slug}
-      />
+      <div>
+        <Blog
+          readingTime={readingTime}
+          title={frontMatter.title}
+          description={frontMatter.description}
+          date={frontMatter.date}
+          content={source}
+          ogImage={frontMatter.ogImage}
+          slug={slug}
+        />
+      </div>
     </Layout>
   );
 };
