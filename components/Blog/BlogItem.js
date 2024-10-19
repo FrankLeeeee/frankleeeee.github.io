@@ -4,7 +4,7 @@ import NextLink from "next/link";
 const BlogItem = ({ blog }) => {
   return (
     <div>
-      <div className="col-span-1 shadow-sm px-8">
+      <div className="col-span-1 shadow-sm mx-4">
         {/* top side image */}
         <div className="flex flex-1">
           <img
