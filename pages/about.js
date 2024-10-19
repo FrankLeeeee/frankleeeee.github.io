@@ -11,7 +11,6 @@ import honours from "../data/honours";
 import GoogleScholarButton from "../components/GoogleScholarButton";
 import HonourList from "../components/HonourList";
 import Profile from "../components/Profile";
-import VisitorCounter from "../components/VisitorCounter";
 
 function About() {
   return (
@@ -39,10 +38,6 @@ function About() {
 
         <Section title="Skills">
           <Techstack data={skills} />
-        </Section>
-
-        <Section>
-          <VisitorCounter />
         </Section>
       </div>
     </Layout>
