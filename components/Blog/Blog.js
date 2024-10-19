@@ -15,7 +15,7 @@ const Blog = ({ readingTime, title, description, date, ogImage, content }) => (
         h3: ({ children }) => <h3 className="text-white">{children}</h3>,
         code: ({ children }) => <code className="text-white">{children}</code>,
         a: ({ children, href }) => (
-          <a className="text-white " href={href}>
+          <a className="text-white" href={href}>
             {children}
           </a>
         ),
