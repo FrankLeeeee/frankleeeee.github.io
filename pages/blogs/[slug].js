@@ -1,18 +1,9 @@
 import React from "react";
 import readingTime from "reading-time";
-import mdxPrism from "mdx-prism";
-import { serialize } from "next-mdx-remote/serialize";
-import { MDXRemote } from "next-mdx-remote";
 import Layout from "../../components/Layout";
 
 // mdx plugins
-import remarkAutolinkHeadings from "remark-autolink-headings";
-import remarkSlug from "remark-slug";
-import remarkCodeTitles from "remark-code-titles";
-import remarkCapitalize from "remark-capitalize";
-import remarkExternalLinks from "remark-external-links";
-import remarkImages from "remark-images";
-
+import Head from "next/head";
 import Blog from "../../components/Blog/Blog";
 import api from "../../lib/lib";
 
@@ -65,6 +56,12 @@ const BlogPost = ({ readingTime, frontMatter, slug, source }) => {
 
   return (
     <Layout>
+      <Head>
+        {/* put the title, description, and ogImage in the head  */}
+        <title>{frontMatter.title}</title>
+        <meta name="description" content={frontMatter.description} />
+        <meta property="og:image" content={frontMatter.ogImage} />
+      </Head>
       <div>
         <Blog
           readingTime={readingTime}

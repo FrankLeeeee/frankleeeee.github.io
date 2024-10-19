@@ -8,7 +8,7 @@ export default function Document() {
         <meta name="description" content="Personal website of Shenggui Li" />
         <meta
           name="keywords"
-          content="Shenggui Li, Li Shenggui, Shenggui, Frank Lee, FrankLeeeeee, NTU, ColossalAI, Colossal-AI, Open-Sora, HPC-AI, HPC-AI Technology"
+          content="Shenggui Li, Li Shenggui, Shenggui, Frank Lee, FrankLeeeeee, NTU"
         ></meta>
         <meta name="theme-color" content="#000000" />
         <meta property="og:type" content="website" />
