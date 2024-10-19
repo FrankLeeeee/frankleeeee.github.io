@@ -4,7 +4,7 @@ import NextLink from "next/link";
 const BlogItem = ({ blog }) => {
   return (
     <div>
-      <div className="col-span-1 rounded-md shadow-sm">
+      <div className="col-span-1 shadow-sm px-8">
         {/* top side image */}
         <div className="flex flex-1">
           <img
@@ -16,12 +16,12 @@ const BlogItem = ({ blog }) => {
         </div>
 
         {/* bottom side content */}
-        <div className="flex flex-1 items-center justify-between truncate rounded-r-md border-b border-r border-t border-gray-200 bg-white h-20">
+        <div className="flex flex-1 items-center justify-between truncate rounded-b-md border-b border-r border-t border-gray-200 bg-white h-20">
           <div className="flex-1 truncate px-4 py-2 text-sm">
             <NextLink
               as={`/blogs/${blog.slug}`}
               href="/blogs/[slug]"
-              className="font-medium text-gray-900 hover:text-gray-600"
+              className="font-medium text-large text-gray-900 hover:text-gray-600"
             >
               {blog.title}
             </NextLink>

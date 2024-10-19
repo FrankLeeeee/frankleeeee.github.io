@@ -19,25 +19,25 @@ import api from "../../lib/lib";
 export async function getStaticProps({ params }) {
   const { content, data } = api.getBlogContentBySlug(params.slug);
 
-  const mdxSource = await serialize(content, {
-    mdxOptions: {
-      remarkPlugins: [
-        remarkAutolinkHeadings,
-        remarkSlug,
-        remarkCodeTitles,
-        remarkCapitalize,
-        remarkExternalLinks,
-        remarkImages,
-      ],
-      rehypePlugins: [mdxPrism],
-    },
-  });
+  // const mdxSource = await serialize(content, {
+  //   mdxOptions: {
+  //     remarkPlugins: [
+  //       remarkAutolinkHeadings,
+  //       remarkSlug,
+  //       remarkCodeTitles,
+  //       remarkCapitalize,
+  //       remarkExternalLinks,
+  //       remarkImages,
+  //     ],
+  //     rehypePlugins: [mdxPrism],
+  //   },
+  // });
   const tags = data.tags ?? [];
   return {
     props: {
       slug: params.slug,
       readingTime: readingTime(content).text,
-      source: mdxSource,
+      source: content,
       frontMatter: data,
       tags,
     },
@@ -61,7 +61,7 @@ export async function getStaticPaths() {
 }
 
 const BlogPost = ({ readingTime, frontMatter, slug, source }) => {
-  const content = MDXRemote(source);
+  // const content = MDXRemote(source);
 
   return (
     <Layout>
@@ -70,7 +70,7 @@ const BlogPost = ({ readingTime, frontMatter, slug, source }) => {
         title={frontMatter.title}
         description={frontMatter.description}
         date={frontMatter.date}
-        content={content}
+        content={source}
         ogImage={frontMatter.ogImage}
         slug={slug}
       />
