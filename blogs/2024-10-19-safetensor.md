@@ -38,7 +38,7 @@ With this in mind, we can basically manipulate many parts of the program, includ
 
 ### Scenario 1: Automatically shut down the training process
 
-As we can see the "hello" example, we need to write the malicious code as a string. Therefore, we can prepare the following code to create a new thread, which kills the parent process after 5 seconds when it is triggered. This thread works at the back so the user won't notice anything and `os.kill` does not return any error trace, which makes it hard to detect the malicious code.
+As we can see in the "hello" example above, the malicious code is written as a code string. Similarly, we can prepare the following code string to create a new thread, which kills the parent process after 5 seconds. This thread works at the background so the user won't notice anything and `os.kill` does not return any error trace, which makes it hard to detect the malicious code.
 
 ```python
 AUTO_SHUTDOWN = """
@@ -79,7 +79,7 @@ state_dict = inject_malicious_code(state_dict, AUTO_SHUTDOWN)
 
 ### Scenario 2: Introduce errors in collective communication
 
-Similarly, if we want to modify the behaviour of the collective communication operations, we can introduce errors in its computation so that the gradients will never be correct in distributed training. We can prepare the following code to hijack the `all_reduce` function. This code monkey patches the `all_reduce` API in the `torch.distributed` module and adds 1 to the tensor. As a result, the all-reduce results will be larger than the expected results.
+Similarly, if we want to modify the behaviour of the collective communication operations, we can introduce errors in its computation so that the gradients will never be correct in distributed training. We can prepare the following code string to hijack the `all_reduce` function. This code string monkey patches the `all_reduce` API in the `torch.distributed` module and adds 1 to the tensor in place. As a result, the all-reduce results will be larger than the expected results.
 
 ```python
 HIJACK_ALL_REDUCE = """
