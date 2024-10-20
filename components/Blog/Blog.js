@@ -4,7 +4,6 @@ import remarkGfm from "remark-gfm";
 import rehypeAutolinkHeadings from "remark-autolink-headings";
 import remarkSlug from "remark-slug";
 import remarkExternalLinks from "remark-external-links";
-// import { dark } from "react-syntax-highlighter/dist/esm/styles/prism";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { oneDark } from "react-syntax-highlighter/dist/cjs/styles/prism";
 
