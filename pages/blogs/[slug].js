@@ -9,20 +9,6 @@ import api from "../../lib/lib";
 
 export async function getStaticProps({ params }) {
   const { content, data } = api.getBlogContentBySlug(params.slug);
-
-  // const mdxSource = await serialize(content, {
-  //   mdxOptions: {
-  //     remarkPlugins: [
-  //       remarkAutolinkHeadings,
-  //       remarkSlug,
-  //       remarkCodeTitles,
-  //       remarkCapitalize,
-  //       remarkExternalLinks,
-  //       remarkImages,
-  //     ],
-  //     rehypePlugins: [mdxPrism],
-  //   },
-  // });
   const tags = data.tags ?? [];
   return {
     props: {

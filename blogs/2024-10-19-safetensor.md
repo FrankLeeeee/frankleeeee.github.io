@@ -2,7 +2,6 @@
 title: "Why do we need Hugging Face's SafeTensor?"
 description: "Malicious code can be injected in your model weights and safetensors is all you need."
 date: "2024-10-19"
-slug: "2024-10-19-safetensor"
 ogImage:
   url: "https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/safetensors/safetensors-logo-light.svg"
 ---

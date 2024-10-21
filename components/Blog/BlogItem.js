@@ -21,7 +21,7 @@ const BlogItem = ({ blog }) => {
             <NextLink
               as={`/blogs/${blog.slug}`}
               href="/blogs/[slug]"
-              className="font-medium text-large text-gray-900 hover:text-gray-600"
+              className="text-large font-medium text-black hover:text-gray-600"
             >
               {blog.title}
             </NextLink>
@@ -30,7 +30,7 @@ const BlogItem = ({ blog }) => {
               {blog.description}
             </p>
 
-            <div className="flex space-x-2">
+            <div className="flex space-x-2 text-gray-500">
               <p>{blog.timeReading.text}</p>
               <p>•</p>
 
