@@ -132,7 +132,6 @@ function AboutCard() {
           of ISC21.
         </p>
       </blockquote>
-
       <blockquote className="mt-2">
         {" "}
         You can find my 📄 CV{" "}
@@ -146,10 +145,13 @@ function AboutCard() {
         </a>
         .
       </blockquote>
-
       <blockquote className="mt-2">
-        I am involved in several interesting projects, feel free to email me for
+        I am currently working on builiding efficient systems for generative AI
+        and write technical blogs sometimes. Feel free to contact me for
         collaboration.
+      </blockquote>
+      <blockquote className="mt-2">
+        I was previously involved in some interesting projects.
         <ProjectList data={projects} />
       </blockquote>
     </div>
