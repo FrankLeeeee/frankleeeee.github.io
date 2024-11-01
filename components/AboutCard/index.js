@@ -67,7 +67,7 @@ function AboutCard() {
           >
             HPC-AI Lab
           </a>{" "}
-          and a co-founder of{" "}
+          and a founding member of{" "}
           <a
             className="text-blue-400"
             href="https://hpc-ai.com/"
