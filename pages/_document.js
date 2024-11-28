@@ -27,6 +27,19 @@ export default function Document() {
           content="https://franklee.xyz/assets/logo.png"
         />
         <meta property="og:url" content="https://franklee.xyz"></meta>
+
+        {/* twitter card settings */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Shenggui Li" />
+        <meta
+          name="twitter:description"
+          content="Personal website of Shenggui Li"
+        />
+        <meta
+          name="twitter:image"
+          content="https://franklee.xyz/assets/logo.png"
+        />
+        <meta name="twitter:url" content="https://franklee.xyz"></meta>
       </Head>
       <body>
         <Main />
