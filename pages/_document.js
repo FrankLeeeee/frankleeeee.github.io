@@ -17,10 +17,7 @@ export default function Document() {
         {/* open-graph settings */}
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Shenggui Li" />
-        <meta
-          property="og:description"
-          content="Personal website of Shenggui Li"
-        />
+        <meta property="og:description" content="Personal website" />
         <meta property="og:site_name" content="Shenggui Li" />
         <meta
           property="og:image"
@@ -29,12 +26,9 @@ export default function Document() {
         <meta property="og:url" content="https://franklee.xyz"></meta>
 
         {/* twitter card settings */}
-        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:card" content="summary" />
         <meta name="twitter:title" content="Shenggui Li" />
-        <meta
-          name="twitter:description"
-          content="Personal website of Shenggui Li"
-        />
+        <meta name="twitter:description" content="Personal website" />
         <meta
           name="twitter:image"
           content="https://franklee.xyz/assets/logo.png"
