@@ -51,7 +51,7 @@ const BlogPost = ({ readingTime, frontMatter, slug, source }) => {
           description: frontMatter.description,
           url: `https://franklee.xyz/blogs/${slug}`,
           site_name: "Shenggui Li",
-          images: [{ url: frontMatter.ogImage }],
+          images: [{ url: frontMatter.ogImage.url, alt: frontMatter.title }],
         }}
       />
       <div>
