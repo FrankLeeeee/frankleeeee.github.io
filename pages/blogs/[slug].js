@@ -46,7 +46,27 @@ const BlogPost = ({ readingTime, frontMatter, slug, source }) => {
         {/* put the title, description, and ogImage in the head  */}
         <title>{frontMatter.title}</title>
         <meta name="description" content={frontMatter.description} />
+
+        {/* open-graph settings */}
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content={frontMatter.title} />
+        <meta property="og:description" content={frontMatter.description} />
+        <meta property="og:site_name" content="Shenggui Li" />
         <meta property="og:image" content={frontMatter.ogImage} />
+        <meta
+          property="og:url"
+          content={`https://franklee.xyz/blogs/${slug}`}
+        ></meta>
+
+        {/* twitter card settings */}
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:title" content={frontMatter.title} />
+        <meta name="twitter:description" content={frontMatter.description} />
+        <meta name="twitter:image" content={frontMatter.ogImage} />
+        <meta
+          name="twitter:url"
+          content={`https://franklee.xyz/blogs/${slug}`}
+        ></meta>
       </Head>
       <div>
         <Blog
