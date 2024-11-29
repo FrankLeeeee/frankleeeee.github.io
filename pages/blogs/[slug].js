@@ -3,9 +3,9 @@ import readingTime from "reading-time";
 import Layout from "../../components/Layout";
 
 // mdx plugins
-import Head from "next/head";
 import Blog from "../../components/Blog/Blog";
 import api from "../../lib/lib";
+import { NextSeo } from "next-seo";
 
 export async function getStaticProps({ params }) {
   const { content, data } = api.getBlogContentBySlug(params.slug);
@@ -42,32 +42,18 @@ const BlogPost = ({ readingTime, frontMatter, slug, source }) => {
 
   return (
     <Layout>
-      <Head>
-        {/* put the title, description, and ogImage in the head  */}
-        <title>{frontMatter.title}</title>
-        <meta name="description" content={frontMatter.description} />
-
-        {/* open-graph settings */}
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content={frontMatter.title} />
-        <meta property="og:description" content={frontMatter.description} />
-        <meta property="og:site_name" content="Shenggui Li" />
-        <meta property="og:image" content={frontMatter.ogImage} />
-        <meta
-          property="og:url"
-          content={`https://franklee.xyz/blogs/${slug}`}
-        ></meta>
-
-        {/* twitter card settings */}
-        <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" content={frontMatter.title} />
-        <meta name="twitter:description" content={frontMatter.description} />
-        <meta name="twitter:image" content={frontMatter.ogImage} />
-        <meta
-          name="twitter:url"
-          content={`https://franklee.xyz/blogs/${slug}`}
-        ></meta>
-      </Head>
+      <NextSeo
+        title={frontMatter.title}
+        description={frontMatter.description}
+        canonical={`https://franklee.xyz/blogs/${slug}`}
+        openGraph={{
+          title: frontMatter.title,
+          description: frontMatter.description,
+          url: `https://franklee.xyz/blogs/${slug}`,
+          site_name: "Shenggui Li",
+          images: [{ url: frontMatter.ogImage }],
+        }}
+      />
       <div>
         <Blog
           readingTime={readingTime}
