@@ -3,7 +3,7 @@ title: "Why do we need Hugging Face's SafeTensor?"
 description: "Malicious code can be injected in your model weights and safetensors is all you need."
 date: "2024-10-19"
 ogImage:
-  url: "https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/safetensors/safetensors-logo-light.svg"
+  url: "https://franklee.xyz/public_assets/blog_media/safetensor.jpeg"
 ---
 
 A long time ago, a very simple question came to my mind when I was reading a bunch of Hugging Face's documentation - what does Hugging Face's Safetensor do? The term "Safetensor" appears in many places in the Hugging Face's documentation but people rarely talk about it and discuss its purpose. Recently, there was a security affair which affected a team's model training progress and this prompts me to revisit this question and write this blog. It should be noted that this blog is not a discussion of the affair but rather the technical advocation for the use of safetensors to protect your models, which are the most important assets in the AI era.
