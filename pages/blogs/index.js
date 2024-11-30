@@ -14,13 +14,11 @@ export const getStaticProps = async () => {
     "title",
     "description",
     "date",
-    "coverImage",
-    "excerpt",
     "timeReading",
     "ogImage",
     "content",
+    "tags",
   ]);
-
   const blogsPerPage = 8;
   const NumPages = Math.ceil(blogs.length / blogsPerPage);
 
