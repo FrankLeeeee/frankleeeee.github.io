@@ -11,16 +11,16 @@ const BlogItem = ({ blog }) => {
             src={blog.ogImage.url}
             alt="blog"
             lazy="loading"
-            className="object-cover h-24 w-32 object-cover rounded-l-md"
+            className="object-cover w-24 md:w-32 lg:w-48 object-cover rounded-l-md"
           />
 
           {/* bottom side content */}
-          <div className="flex flex-1 items-center justify-between truncate rounded-r-md border-l border-gray-300 bg-white h-24">
-            <div className="flex-1 truncate px-4 py-2 text-sm">
+          <div className="flex flex-1 items-center justify-between truncate rounded-r-md border-l border-gray-300 bg-white">
+            <div className="flex-1 truncate px-4 py-2 text-xs md:text-sm">
               <NextLink
                 as={`/blogs/${blog.slug}`}
                 href="/blogs/[slug]"
-                className="text-xl font-medium text-black hover:text-gray-600"
+                className="text-base md:text-2xl font-medium text-black hover:text-blue-400 text-wrap"
               >
                 {blog.title}
               </NextLink>
@@ -34,6 +34,16 @@ const BlogItem = ({ blog }) => {
                 <p>•</p>
 
                 <p>{blog.date}</p>
+              </div>
+
+              {/* tags */}
+              <div className="flex flex-wrap gap-2 mt-1">
+                {blog.tags &&
+                  blog.tags.map((tag) => (
+                    <p className="rounded px-1 border border-gray-300 text-gray-500 hover:text-gray-800 hover:border-gray-400">
+                      {tag}
+                    </p>
+                  ))}
               </div>
             </div>
           </div>
