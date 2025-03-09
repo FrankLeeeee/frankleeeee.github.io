@@ -1,6 +1,6 @@
 import React from "react";
 import ProjectList from "../ProjectList";
-import projects from "../../data/projects";
+import { currentProjects, pastProjects } from "../../data/projects";
 
 function AboutCard() {
   return (
@@ -49,34 +49,8 @@ function AboutCard() {
           >
             Prof. Chen Change Loy
           </a>
-          . I also worked with{" "}
-          <a
-            className="text-blue-400"
-            href="https://www.comp.nus.edu.sg/~youy/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Prof. Yang You
-          </a>{" "}
-          from 2021 to 2024 as a research asssistant in the{" "}
-          <a
-            className="text-blue-400"
-            href="https://ai.comp.nus.edu.sg/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            HPC-AI Lab
-          </a>{" "}
-          and a founding member of{" "}
-          <a
-            className="text-blue-400"
-            href="https://hpc-ai.com/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            HPC-AI Technology
-          </a>
-          .
+          . I also worked as a founding member of a MLSys startup from 2022 to
+          2024.
         </p>
 
         <p className="text-justify mt-2">
@@ -150,9 +124,16 @@ function AboutCard() {
         and write technical blogs sometimes. Feel free to contact me for
         collaboration.
       </blockquote>
+
+      <blockquote className="mt-2">
+        During my spare time, I am learning and contributing to open-source
+        projects such as
+        <ProjectList data={currentProjects} />
+      </blockquote>
+
       <blockquote className="mt-2">
         I was previously involved in some interesting projects.
-        <ProjectList data={projects} />
+        <ProjectList data={pastProjects} />
       </blockquote>
     </div>
   );
