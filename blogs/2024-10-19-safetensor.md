@@ -3,7 +3,7 @@ title: "Why do we need Hugging Face's SafeTensor?"
 description: "Malicious code can be injected in your model weights and safetensors is all you need."
 date: "2024-10-19"
 ogImage:
-  url: "https://franklee.xyz/public_assets/blog_media/safetensor.jpeg"
+  url: "https://franklee.xyz/public_assets/blog_media/2024-10-19-safetensor/safetensor.jpeg"
 tags: ["deep learning", "security"]
 ---
 
