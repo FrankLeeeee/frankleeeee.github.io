@@ -25,6 +25,14 @@ export const H3 = ({ children, id }) => {
   );
 };
 
+export const H4 = ({ children, id }) => {
+  return (
+    <h4 id={id} className="text-white">
+      {children}
+    </h4>
+  );
+};
+
 export const Link = ({ children, href }) => {
   return (
     <a className="text-slate-200 break-all" href={href}>

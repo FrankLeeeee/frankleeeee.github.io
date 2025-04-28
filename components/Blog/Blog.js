@@ -4,7 +4,7 @@ import remarkGfm from "remark-gfm";
 import rehypeAutolinkHeadings from "remark-autolink-headings";
 import remarkSlug from "remark-slug";
 import remarkExternalLinks from "remark-external-links";
-import { H2, H3, Link, ListItem, Code } from "./MdElements";
+import { H2, H3, H4, Link, ListItem, Code } from "./MdElements";
 import {
   FacebookShareButton,
   LinkedinShareButton,
@@ -92,6 +92,7 @@ const Blog = ({
         components={{
           h2: H2,
           h3: H3,
+          h4: H4,
           a: Link,
           li: ListItem,
           code: Code,

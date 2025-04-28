@@ -11,7 +11,7 @@ const BlogItem = ({ blog }) => {
             src={blog.ogImage.url}
             alt="blog"
             lazy="loading"
-            className="object-cover w-24 md:w-32 lg:w-48 object-cover rounded-l-md"
+            className="object-cover w-16 h-16 md:h-24 md:w-24 lg:h-32 lg:w-32 object-cover rounded-l-md"
           />
 
           {/* bottom side content */}
