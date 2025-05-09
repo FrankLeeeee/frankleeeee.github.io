@@ -9,12 +9,18 @@ tags: ["agent", "open-source", "LLM"]
 
 Recently, a new company called Bufferfly Effect has raised 75 million USD from well-known investors such as Benchmark Capital. You might not have heard of this company, but you probably have heard its LLM agent product - Manus, which went viral on social media last month. I was given an invitation code to Manus by my investor friend during its debut in early March. As an agent novice user, I was quite impressed by how the product was constructed, including its automation capability and user experience. I asked Manus to help me plan a trip to Japan and Manus demonstrated its work progress step by step and it is able to deliver a complete trip plan after 20 minutes (the speed can still be improved). Just like DeepSeek, Manus showcased what it actually did in a sandbox, being it a terminal or browser. I believe this kind of visualization of chain of thought & action is what makes this product favoured by many users.
 
-![Manus](https://franklee.xyz/public_assets/blog_media/2025-04-27-open-manus/manus.jpeg)
-_Manus planning a trip to Japan_
+<p>
+    <img src="https://franklee.xyz/public_assets/blog_media/2025-04-27-open-manus/manus.jpeg" alt>
+    <center>
+    <em>Manus planning a trip to Japan</em>
+    </center>
+</p>
 
 As a researcher in machine learning system, I spend my time on how to make AI more efficient and have limited knowledge on how agent systems work. Luckily, the open-source project [OpenManus](https://github.com/mannaandpoem/OpenManus) has made efforts to reproduce Manus and this gives me a opportunity to take a look at the inner working of agent systems.
 
 This blog post is a summary of my exploration on OpenManus while reading through the source code and I hope it gives you a brief introduction to agent systems if you are also a beginner like me.
+
+Do note that the `Open-Manus` project is constantly evolving and my blog is only specific to its codebase in April 2025.
 
 ## Prerequisites
 
@@ -26,51 +32,66 @@ An agent is an autonomous system designed to perceive its environment, make deci
 
 ### 2. ReAct Agent
 
-ReAct agent is a simple but useful idea in agent. It combines both reasoning and execution in an interleaved manner to improve the agent's performance in tasks. ReAct agents iteratively think and reason about the current task, and then decide whether to use tools to complete the current task. If the tools are needed, it will take the action and update the internal state. The general workflow is shown below.
+ReAct agent is a simple but useful concept in agent, proposed by the OpenAI researcher Shunyu Yao. It combines both reasoning and execution in an interleaved manner to improve the agent's performance in tasks. ReAct agents iteratively think and reason about the current task, and then decide whether to use tools to complete the current task. If the tools are needed, it will take the action and update the internal state. The general workflow is shown below.
 
 ![Manus](https://franklee.xyz/public_assets/blog_media/2025-04-27-open-manus/react.png)
 
 ### 3. Function Calling
 
-Function calling is LLM's ability to decide which function/tool to use and what parameters to provide to the function call when given a context and a list of function descriptions. The user needs to define functions in a specific format such as:
+Function calling is LLM's ability to decide which function/tool to use and what parameters to provide to the function call when given a context and a list of function descriptions. This allows the model to dynamically select the suitable tools for a specific task. The user needs to define functions in a specific format such as:
 
 ```python
-get_weather_func = {
+from openai import OpenAI
+
+client = OpenAI(api_key="your-key")
+
+weather_tool = {
     "type": "function",
-    "name": "get_weather",
-    "description": "Get current temperature for a given location.",
-    "parameters": {
-        "type": "object",
-        "properties": {
-            "location": {
-                "type": "string",
-                "description": "City and country e.g. Bogotá, Colombia"
-            }
-        },
-        "required": [
-            "location"
-        ],
-        "additionalProperties": False
+    "function": {
+        "name": "get_weather",
+        "description": "Get current temperature for a given location.",
+        "parameters": {
+            "type": "object",
+            "properties": {
+                "location": {
+                    "type": "string",
+                    "description": "City and country e.g. Bogotá, Colombia"
+                }
+            },
+            "required": [
+                "location"
+            ],
+            "additionalProperties": False
+        }
     }
 }
 ```
 
-Then put this description in the tools field in the chat API, then the model will return a response. The response contains the name(s) of the function(s) to use, and the corresponding parameters structured in json format. In this way, the developer can look up for the actual function code and execute that function with the given parameters.
+We can then call the OpenAI APIs with the `tools` field.
 
 ```python
-chat.completion.create(
-    model=""
-    prompt=""
-    tools=[
-        get_weather_func
-        ]
+response = client.chat.completions.create(
+    model="gpt-4.1",
+    messages=[{"role": "user", "content": "What is the weather like in Paris today?"}],
+    tools=[weather_tool]
 )
+
+print(response.choices[0].message.tool_calls)
 ```
 
-Then the repsonse will contain a field called `tool_calls` which contains the name(s) of the function(s) to use, and the corresponding parameters structured in json format.
+The API will return a response like below. The response contains the name(s) of the function(s) to use, and the corresponding parameters structured in json format. In this way, the developer can look up for the actual function code and execute that function with the given parameters.
 
-```json
-tools: {name: "xxxx", parameters: "location": "Singapore"}
+```text
+[
+    ChatCompletionMessageToolCall(
+        id='call_xFu1qgsnPzzviCxNvDNcXf41',
+        function=Function(
+            arguments='{"location":"Paris, France"}',
+            name='get_weather'
+        ),
+        type='function'
+    )
+]
 ```
 
 ### 4. Browser-User
@@ -177,7 +198,7 @@ The [agent](https://github.com/mannaandpoem/OpenManus/tree/main/app/agent) modul
 
 4. Manus
 
-   Manus is the main agent in the Open-Manus system. It is different from the ToolCallAgent in that it processes the prompt a bit before thinking. As shown in the code below, Manus will check if browser was used in the last 3 messages. If yes, it will format the prompt by injecting the current browser's state information into the prompt. This allows the LLM to do a better job in function calling as it is aware of the content on the browser.
+   `Manus` is the main agent in the Open-Manus system. It is different from the ToolCallAgent as it processes the prompt a bit before thinking. As shown in the code below, Manus will check if browser was used in the last 3 messages. If yes, it will format the prompt by injecting the current browser's state information (e.g. text, buttons, tabs, etc.) into the prompt. This allows the LLM to do a better job in function calling as it is aware of the content on the browser and can choose what action to perform on the browser.
 
    ```python
    async def think(self) -> bool:
@@ -220,19 +241,19 @@ The `tools` module implements a collection to external tools which can be used b
 
 1. Bash
 
-   This tool creates a bash session using asyncio.create_subprocess_shell, and receives bash command for execution. It then return the log in shell as output.
+   This tool creates a bash session using `asyncio.create_subprocess_shell`, and receives bash command for execution. It then return the log in shell as output.
 
 2. BrowserUseTool
 
-   It relies on the browser-use package to control the browser and execute commands such as go_to_url, click_element, input_text, scroll_up and so on. If the comand is extract_content, it will use markdownify to convert to the page content into Markdown text and use LLM to extract the text according to a goal given by the inputs.
+   It relies on the browser-use package to control the browser and execute commands such as `go_to_url`, `click_element`, `input_text`, and so on. If the comand is extract_content, it will use markdownify to convert to the page content into Markdown text and use LLM to extract the text according to a goal given by the inputs.
 
 3. CreateChatCompletiton
 
-   This tool does not actually perform chat completion, instead, it only extracts the necessary fields from a response data. When calling execute, the tool receives a list of strings (field names) and the response data and only keep the part of the data in the response according to the required fields.
+   This tool does not actually perform chat completion, instead, it only extracts the necessary fields from a response data. When calling `execute`, the tool receives a list of strings (field names) and the response data and only keep the part of the data in the response according to the required fields.
 
 4. DeepResearch
 
-   The Deep Research tool execution can be broken down into several steps:
+   The Deep Research tool is a tool that can be used to perform a complete research cycle. It can be seen as an extension of the chat completion and web search by following the following steps:
 
    - Optimize the search query using LLM
    - Perform a complete research cycle:
@@ -267,6 +288,8 @@ The `tools` module implements a collection to external tools which can be used b
 
 #### Sandbox
 
+The sandbox module is responsible for creating an isolated environment for the agent to execute the task. It is a wrapper for the Docker SDK and provides a unified interface for the agent to interact with the sandbox.
+
 ![  ](https://franklee.xyz/public_assets/blog_media/2025-04-27-open-manus/sandbox.png)
 
 1. BaseSandboxClient
@@ -291,6 +314,8 @@ The `tools` module implements a collection to external tools which can be used b
 
 #### Memory
 
+Memory is a module that manages the conversation history (context) of the agent. It is responsible for storing the messages and the states of the agent.
+
 ![Memory](https://franklee.xyz/public_assets/blog_media/2025-04-27-open-manus/memory.png)
 
 1. Message
@@ -309,8 +334,7 @@ Manus carries out work in 4 steps:
 
 1.  Initialization stage
 
-    Manus inherits the ToolCallAgent class, during initialization, it will set some basic properties such as name, system prompt, next step prompt and list the available tools it can use. In Manus, the available tools inlcude PythonExecute, BrowserUseTool, StrReplaceEditor and Terminate.
-    class Manus(ToolCallAgent):
+    Manus inherits the `ToolCallAgent` class, during initialization, it will set some basic properties such as name, system prompt, next step prompt and list the available tools it can use. In Manus, the available tools inlcude `PythonExecute`, `BrowserUseTool`, `StrReplaceEditor` and `Terminate`.
 
     ```python
     class Manus(ToolCallAgent):
@@ -341,9 +365,9 @@ Manus carries out work in 4 steps:
 
 2.  Thinking Stage
 
-    This is the first stage of a ReAct agent, Manus will think about its next move based on the current and recent messages. In Manus, it handles the browser-use specifically: - If there is any recent use of browser, it will format the next step prompt using the browser_context_helper. format_next_step_prompt will inject the current states of the browser into the prompt, the states include URL, tabs, clickable elements and so on.
+    This is the first stage of a ReAct agent, Manus will think about its next move based on the current and recent messages. In Manus, it handles the browser-use specifically: if there is any recent use of browser, it will format the next step prompt, `browser_context_helper.format_next_step_prompt` will inject the current states of the browser into the prompt, the states include URL, tabs, clickable elements and so on.
 
-    It then calls its parent class ToolCallAgent's thinking method. In this method, Manus calls LLM to think about the next action. at the same, the available tools are given to LLMs for function calling as well, so LLM will select the suitable tools to use for the next action.
+    It then calls its parent class `ToolCallAgent`'s thinking method. In this method, Manus calls LLM to think about the next action. at the same time, the available tools are given to LLMs for function calling as well, so LLM will select the suitable tools to use for the next action.
 
 - Acting Stage
 
