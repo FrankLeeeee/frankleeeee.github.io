@@ -1,10 +1,17 @@
 const currentProjects = [
   {
     emoji: "🚀",
+    link: "https://github.com/sgl-project/SpecForge",
+    name: "SpecForge",
+    badge: "sgl-project/SpecForge",
+    description: "Project Lead",
+  },
+  {
+    emoji: "🚀",
     link: "https://github.com/sgl-project/sglang",
     name: "SGLang",
     badge: "sgl-project/SGLang",
-    description: "Committer",
+    description: "Core Dev",
   },
 ];
 
@@ -14,21 +21,21 @@ const pastProjects = [
     link: "https://github.com/hpcaitech/Open-Sora",
     name: "Open-Sora",
     badge: "hpcaitech/Open-Sora",
-    description: "Core contributor (until July 2024)",
+    description: "System Lead (until July 2024)",
   },
   {
     emoji: "⚡️",
     link: "https://github.com/hpcaitech/SwiftInfer",
     name: "SwiftInfer",
     badge: "hpcaitech/SwiftInfer",
-    description: "Core contributor (until Jan 2024)",
+    description: "Project Lead (until Jan 2024)",
   },
   {
     emoji: "⚡️",
     link: "https://github.com/hpcaitech/ColossalAI",
     name: "ColossalAI",
     badge: "hpcaitech/ColossalAI",
-    description: "Top 1 contributor (until Jan 2024)",
+    description: "Project Lead, Top 1 contributor (until Jan 2024)",
   },
 ];
 
