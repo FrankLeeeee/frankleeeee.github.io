@@ -1,5 +1,73 @@
 const news = [
   {
+    date: "2025-07",
+    emoji: "🎉",
+    text: (
+      <span>
+        Released{" "}
+        <a
+          className="text-blue-400"
+          href="https://github.com/sgl-project/SpecForge"
+          target="_blank"
+          rel="noreferrer"
+        >
+          SpecForge v0.2{" "}
+          <img
+            src="https://img.shields.io/github/stars/sgl-project/SpecForge?style=social"
+            alt="star-badge"
+            className="inline"
+          ></img>
+        </a>{" "}
+        and{" "}
+        <a
+          className="text-blue-400"
+          href="https://huggingface.co/collections/lmsys/specbundle"
+          target="_blank"
+          rel="noreferrer"
+        >
+          🤗 SpecBundle phase 1
+        </a>
+        ! Check out our{" "}
+        <a
+          className="text-blue-400"
+          href="https://lmsys.org/blog/2025-12-23-spec-bundle-phase-1/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          blog
+        </a>{" "}
+        !
+      </span>
+    ),
+  },
+  {
+    date: "2025-07",
+    emoji: "🎉",
+    text: (
+      <span>
+        Released{" "}
+        <a
+          className="text-blue-400"
+          href="https://github.com/sgl-project/SpecForge"
+          target="_blank"
+          rel="noreferrer"
+        >
+          SpecForge v0.1
+        </a>
+        ! Check out our{" "}
+        <a
+          className="text-blue-400"
+          href="https://lmsys.org/blog/2025-07-25-spec-forge/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          blog
+        </a>{" "}
+        !
+      </span>
+    ),
+  },
+  {
     date: "2024-08",
     emoji: "🏫",
     text: (
