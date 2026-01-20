@@ -1,5 +1,22 @@
 const news = [
   {
+    date: "2026-01",
+    emoji: "🎉",
+    text: (
+      <span>
+        One paper got accepted to ASPLOS 2026, congratulations to{" "}
+        <a
+          className="text-blue-400"
+          href="https://runyulu.com/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Runyu
+        </a>{"!"}
+      </span>
+    ),
+  },
+  {
     date: "2025-07",
     emoji: "🎉",
     text: (

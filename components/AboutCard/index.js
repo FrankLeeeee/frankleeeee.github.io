@@ -9,7 +9,7 @@ function AboutCard() {
         <p className="text-justify">
           Hi, I am <strong className="gradient-color">Shenggui Li</strong>, you
           can call me <strong className="gradient-color">Frank Lee</strong> as
-          well. I am a first-year PhD student at the Nanyang Technological
+          well. I am a second-year PhD student at the Nanyang Technological
           University in Singapore, advised by{" "}
           <a
             className="text-blue-400"
@@ -65,7 +65,25 @@ function AboutCard() {
             sequence parallelism
           </a>{" "}
           in 2021, which has attracted follow-ups and is widely adopted for
-          large-scale model training. I am the author of{" "}
+          large-scale model training. I am currently leading the {" "}
+          <a 
+            className="text-blue-400"
+            href="https://github.com/sgl-project/SpecForge"
+            target="_blank"
+            rel="noreferrer"
+          >
+            SpecForge
+          </a>{" "}
+          project and the {" "}
+          <a
+            className="text-blue-400"
+            href="https://docs.sglang.io/SpecForge/community_resources/specbundle.html"
+            target="_blank"
+            rel="noreferrer"
+          >
+            SpecBundle
+            </a>{" "}intiative.
+          I am also the author of{" "}
           <a
             className="text-blue-400"
             href="https://aclanthology.org/2023.acl-long.134/"
