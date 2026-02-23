@@ -10,8 +10,8 @@ const BlogItem = ({ blog }) => {
           <img
             src={blog.ogImage.url}
             alt="blog"
-            lazy="loading"
-            className="object-cover w-16 h-16 md:h-24 md:w-24 lg:h-32 lg:w-32 object-cover rounded-l-md"
+            loading="lazy"
+            className="object-cover w-16 h-16 md:h-24 md:w-24 lg:h-32 lg:w-32 rounded-l-md"
           />
 
           {/* bottom side content */}
@@ -40,7 +40,7 @@ const BlogItem = ({ blog }) => {
               <div className="flex flex-wrap gap-2 mt-1">
                 {blog.tags &&
                   blog.tags.map((tag) => (
-                    <p className="rounded px-1 border border-gray-300 text-gray-500 hover:text-gray-800 hover:border-gray-400">
+                    <p key={tag} className="rounded px-1 border border-gray-300 text-gray-500 hover:text-gray-800 hover:border-gray-400">
                       {tag}
                     </p>
                   ))}
