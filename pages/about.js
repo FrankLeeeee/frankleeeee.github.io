@@ -1,10 +1,8 @@
-import Techstack from "../components/Techstack";
 import Aboutcard from "../components/AboutCard";
 import Layout from "../components/Layout";
 import Section from "../components/Section";
 import NewsList from "../components/NewsList";
 import news from "../data/news";
-import skills from "../data/skills";
 import PublicationList from "../components/PublicationList";
 import publications from "../data/publications";
 import honours from "../data/honours";
@@ -34,10 +32,6 @@ function About() {
 
         <Section title="Honours and Awards">
           <HonourList data={honours} />
-        </Section>
-
-        <Section title="Skills">
-          <Techstack data={skills} />
         </Section>
       </div>
     </Layout>
