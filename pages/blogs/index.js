@@ -1,5 +1,5 @@
 import React from "react";
-import { useSearchParams, useRouter } from "next/navigation";
+import { useRouter } from "next/router";
 import BlogItem from "../../components/Blog/BlogItem";
 import api from "../../lib/lib";
 import Layout from "../../components/Layout";
@@ -30,9 +30,8 @@ export const getStaticProps = async () => {
 // thoughts are personal blogs which are non-technical
 const BlogPage = ({ blogs, blogsPerPage, NumPages }) => {
   // get current page from query params
-  const searchParams = useSearchParams();
   const router = useRouter();
-  const currentPage = parseInt(searchParams.get("page")) || 1;
+  const currentPage = parseInt(router.query.page) || 1;
 
   const blogsToShow = blogs.slice(
     (currentPage - 1) * blogsPerPage,

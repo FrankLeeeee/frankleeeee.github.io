@@ -35,7 +35,7 @@ const Blog = ({
       <h4 className="text-sm text-slate-400">Published on {date}</h4>
       <h4 className="text-sm text-slate-400">Reading time: {readingTime}</h4>
       <h4 className="text-sm text-slate-400">Description: {description}</h4>
-      <img src={ogImage.url} alt="blog" lazy="loa/ding" />
+      <img src={ogImage.url} alt="blog" loading="lazy" />
 
       {/* social media sharing buttons */}
       <div className="flex items-center gap-2">
