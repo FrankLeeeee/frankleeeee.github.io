@@ -1,5 +1,33 @@
 const news = [
   {
+    date: "2026-03",
+    emoji: "🎉",
+    text: <span>One second-authored paper got accepted to ICS 2026.</span>,
+  },
+  {
+    date: "2026-02",
+    emoji: "🎉",
+    text: (
+      <span>
+        One paper got accepted to MLSys 2026, congratulations to{" "}
+        <a
+          className="text-blue-400"
+          href="https://chenqiaoling00.github.io/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Qiaoling
+        </a>
+        {"!"}
+      </span>
+    ),
+  },
+  {
+    date: "2026-02",
+    emoji: "🎉",
+    text: <span>One first-authored paper got accepted to ICLR 2026.</span>,
+  },
+  {
     date: "2026-01",
     emoji: "🎉",
     text: (
@@ -12,7 +40,8 @@ const news = [
           rel="noreferrer"
         >
           Runyu
-        </a>{"!"}
+        </a>
+        {"!"}
       </span>
     ),
   },

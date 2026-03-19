@@ -3,7 +3,7 @@ import { oneDark } from "react-syntax-highlighter/dist/cjs/styles/prism";
 
 export const H1 = ({ children, id }) => {
   return (
-    <h1 id={id} className="text-white">
+    <h1 id={id} className="text-white scroll-mt-20">
       {children}
     </h1>
   );
@@ -11,7 +11,7 @@ export const H1 = ({ children, id }) => {
 
 export const H2 = ({ children, id }) => {
   return (
-    <h2 id={id} className="text-white">
+    <h2 id={id} className="text-white scroll-mt-20">
       {children}
     </h2>
   );
@@ -19,7 +19,7 @@ export const H2 = ({ children, id }) => {
 
 export const H3 = ({ children, id }) => {
   return (
-    <h3 id={id} className="text-white">
+    <h3 id={id} className="text-white scroll-mt-20">
       {children}
     </h3>
   );
@@ -27,7 +27,7 @@ export const H3 = ({ children, id }) => {
 
 export const H4 = ({ children, id }) => {
   return (
-    <h4 id={id} className="text-white">
+    <h4 id={id} className="text-white scroll-mt-20">
       {children}
     </h4>
   );

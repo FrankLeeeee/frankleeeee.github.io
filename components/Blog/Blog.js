@@ -1,9 +1,8 @@
 import React from "react";
 import Markdown from "react-markdown";
 import remarkGfm from "remark-gfm";
-import rehypeAutolinkHeadings from "remark-autolink-headings";
-import remarkSlug from "remark-slug";
-import remarkExternalLinks from "remark-external-links";
+import rehypeSlug from "rehype-slug";
+import rehypeExternalLinks from "rehype-external-links";
 import { H2, H3, H4, Link, ListItem, Code } from "./MdElements";
 import {
   FacebookShareButton,
@@ -30,7 +29,7 @@ const Blog = ({
   slug,
 }) => {
   return (
-    <article className="prose mx-auto text-slate-400">
+    <article className="prose min-w-0 text-slate-400">
       <h1 className="text-4xl text-white font-bold">{title}</h1>
       <h4 className="text-sm text-slate-400">Published on {date}</h4>
       <h4 className="text-sm text-slate-400">Reading time: {readingTime}</h4>
@@ -87,8 +86,8 @@ const Blog = ({
 
       <Markdown
         className="text-justify"
-        remarkPlugins={[remarkGfm, remarkSlug, remarkExternalLinks]}
-        rehypePlugins={[rehypeAutolinkHeadings]}
+        remarkPlugins={[remarkGfm]}
+        rehypePlugins={[rehypeSlug, [rehypeExternalLinks, { target: "_blank", rel: ["noopener", "noreferrer"] }]]}
         components={{
           h2: H2,
           h3: H3,
