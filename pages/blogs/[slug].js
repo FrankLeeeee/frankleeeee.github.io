@@ -76,10 +76,12 @@ const BlogPost = ({ readingTime, frontMatter, slug, source, headings }) => {
             ogImage={frontMatter.ogImage}
             slug={slug}
           />
-          <div className="hidden xl:block">
-            <aside className="sticky top-20 pl-10">
-              <TableOfContents headings={headings} />
-            </aside>
+          <div className="hidden xl:block xl:self-stretch">
+            <div className="sticky top-0 h-screen flex items-center">
+              <aside className="pl-10 overflow-y-auto max-h-[calc(100vh-8rem)]">
+                <TableOfContents headings={headings} />
+              </aside>
+            </div>
           </div>
         </div>
       </div>
