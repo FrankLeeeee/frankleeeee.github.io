@@ -1,5 +1,24 @@
 const news = [
   {
+    date: "2026-05",
+    emoji: "🎉",
+    text: (
+      <span>
+        Three papers got accepted to ICML 2026, thanks to all my collaborators!
+      </span>
+    ),
+  },
+  {
+    date: "2026-04",
+    emoji: "💻",
+    text: (
+      <span>
+        Started internship at ByteDance Seed, working on LLM model architecture
+        and efficiency.
+      </span>
+    ),
+  },
+  {
     date: "2026-03",
     emoji: "🎉",
     text: <span>One second-authored paper got accepted to ICS 2026.</span>,
