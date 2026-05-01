@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import NextLink from "next/link";
 
 const BlogItem = ({ blog }) => {
@@ -7,11 +8,13 @@ const BlogItem = ({ blog }) => {
       <div className="col-span-1 shadow-sm">
         <div className="flex">
           {/* top side image */}
-          <img
+          <Image
             src={blog.ogImage.url}
-            alt="blog"
+            alt="blog cover"
             loading="lazy"
             className="object-cover w-16 h-16 md:h-24 md:w-24 lg:h-32 lg:w-32 rounded-l-md"
+            width={128}
+            height={128}
           />
 
           {/* bottom side content */}

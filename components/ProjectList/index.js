@@ -20,11 +20,13 @@ const ProjectList = ({ data }) => {
           {item.badge && (
             <span>
               &nbsp;
+              {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src={`https://img.shields.io/github/stars/${item.badge}?style=social`}
                 alt="star-badge"
                 className="inline"
-              ></img>
+                loading="lazy"
+              />
             </span>
           )}
         </li>

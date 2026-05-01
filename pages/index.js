@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import Layout from "../components/Layout";
 import Contact from "../components/Contact";
 import Hello from "../components/Hello";
@@ -15,10 +16,13 @@ function App() {
               <Hello />
             </Fade>
 
-            <img
+            <Image
               src="/assets/home-main.svg"
-              alt="home pic"
-              className="max-h-48 md:max-h-64 lg:max-h-80 mt-8"
+              alt="home illustration"
+              className="max-h-48 md:max-h-64 lg:max-h-80 mt-8 w-auto"
+              width={600}
+              height={400}
+              priority
             />
           </div>
         </div>
