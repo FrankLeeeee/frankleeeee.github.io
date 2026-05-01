@@ -8,14 +8,15 @@ const BlogItem = ({ blog }) => {
       <div className="col-span-1 shadow-sm">
         <div className="flex">
           {/* top side image */}
-          <Image
-            src={blog.ogImage.url}
-            alt="blog cover"
-            loading="lazy"
-            className="object-cover w-16 h-16 md:h-24 md:w-24 lg:h-32 lg:w-32 rounded-l-md"
-            width={128}
-            height={128}
-          />
+          <div className="relative flex-shrink-0 w-16 md:w-24 lg:w-32 self-stretch rounded-l-md overflow-hidden">
+            <Image
+              src={blog.ogImage.url}
+              alt="blog cover"
+              fill
+              sizes="(max-width: 768px) 64px, (max-width: 1024px) 96px, 128px"
+              className="object-cover"
+            />
+          </div>
 
           {/* bottom side content */}
           <div className="flex flex-1 items-center justify-between truncate rounded-r-md border-l border-gray-300 bg-white">
