@@ -22,7 +22,9 @@ function Techstack({ data }) {
                     <br />
                     {val.authors.map((author, idx) => (
                       <span
-                        className={author === "Shenggui Li" ? "font-bold" : ""}
+                        className={
+                          author.includes("Shenggui Li") ? "font-bold" : ""
+                        }
                         key={idx}
                       >
                         {author},&nbsp;

@@ -1,6 +1,13 @@
 const currentProjects = [
   {
     emoji: "🚀",
+    link: "https://github.com/sgl-project-dev/sglang-omni",
+    name: "SGLang-Omni",
+    badge: "sgl-project/SGLang-Omni",
+    description: "Project Lead",
+  },
+  {
+    emoji: "🚀",
     link: "https://github.com/sgl-project/SpecForge",
     name: "SpecForge",
     badge: "sgl-project/SpecForge",
