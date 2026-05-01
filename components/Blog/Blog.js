@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import Markdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import rehypeSlug from "rehype-slug";
@@ -34,7 +35,7 @@ const Blog = ({
       <h4 className="text-sm text-slate-400">Published on {date}</h4>
       <h4 className="text-sm text-slate-400">Reading time: {readingTime}</h4>
       <h4 className="text-sm text-slate-400">Description: {description}</h4>
-      <img src={ogImage.url} alt="blog" loading="lazy" />
+      <Image src={ogImage.url} alt="blog cover" loading="lazy" width={800} height={450} className="w-full h-auto" />
 
       {/* social media sharing buttons */}
       <div className="flex items-center gap-2">

@@ -50,12 +50,9 @@ export const Code = ({ className, children }) => {
   // the codeblock will pass the language as a className
   const match = /language-(\w+)/.exec(className || "");
   return match ? (
-    <SyntaxHighlighter
-      PreTag="div"
-      children={String(children).replace(/\n$/, "")}
-      language={match[1]}
-      style={oneDark}
-    />
+    <SyntaxHighlighter PreTag="div" language={match[1]} style={oneDark}>
+      {String(children).replace(/\n$/, "")}
+    </SyntaxHighlighter>
   ) : (
     <code className="text-slate-200">{children}</code>
   );

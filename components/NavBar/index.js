@@ -1,6 +1,7 @@
 import { Disclosure } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function NavBar() {
   return (
@@ -11,15 +12,13 @@ export default function NavBar() {
             <div className="flex h-16 justify-between">
               <div className="flex px-2 lg:px-0">
                 <div className="flex flex-shrink-0 items-center">
-                  <img
-                    className="block h-16 w-auto md:hidden"
+                  <Image
+                    className="h-16 w-auto"
                     src="/assets/logo.png"
-                    alt="Your Company"
-                  />
-                  <img
-                    className="hidden h-16 w-auto md:block"
-                    src="/assets/logo.png"
-                    alt="Your Company"
+                    alt="Shenggui Li"
+                    width={700}
+                    height={356}
+                    priority
                   />
                 </div>
               </div>
