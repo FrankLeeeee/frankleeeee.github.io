@@ -64,8 +64,9 @@ const BlogPost = ({ readingTime, frontMatter, slug, source, headings }) => {
           images: [{ url: frontMatter.ogImage.url, alt: frontMatter.title }],
         }}
       />
-      <div className="max-w-screen-xl mx-auto py-8 px-4 sm:px-8 lg:px-12">
-        <div className="xl:flex xl:gap-10 xl:items-start">
+      <div className="max-w-screen-xl mx-auto py-8 px-4 sm:px-8 xl:px-0">
+        <div className="xl:grid xl:grid-cols-[1fr_minmax(0,720px)_1fr] xl:items-start">
+          <div className="hidden xl:block" />
           <Blog
             readingTime={readingTime}
             title={frontMatter.title}
@@ -75,9 +76,11 @@ const BlogPost = ({ readingTime, frontMatter, slug, source, headings }) => {
             ogImage={frontMatter.ogImage}
             slug={slug}
           />
-          <aside className="hidden xl:block w-56 flex-shrink-0 sticky top-20 self-start">
-            <TableOfContents headings={headings} />
-          </aside>
+          <div className="hidden xl:block">
+            <aside className="sticky top-20 pl-10">
+              <TableOfContents headings={headings} />
+            </aside>
+          </div>
         </div>
       </div>
     </>

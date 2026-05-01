@@ -30,7 +30,7 @@ const Blog = ({
   slug,
 }) => {
   return (
-    <article className="prose min-w-0 text-slate-400">
+    <article className="prose min-w-0 mx-auto text-slate-400">
       <h1 className="text-4xl text-white font-bold">{title}</h1>
       <h4 className="text-sm text-slate-400">Published on {date}</h4>
       <h4 className="text-sm text-slate-400">Reading time: {readingTime}</h4>
