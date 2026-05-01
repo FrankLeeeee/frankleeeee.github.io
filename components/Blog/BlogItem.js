@@ -19,12 +19,12 @@ const BlogItem = ({ blog }) => {
           </div>
 
           {/* bottom side content */}
-          <div className="flex flex-1 items-center justify-between truncate rounded-r-md border-l border-gray-300 bg-white">
+          <div className="flex flex-1 items-center justify-between truncate rounded-r-md border-l border-gray-200 dark:border-gray-300 bg-gray-50 dark:bg-white">
             <div className="flex-1 truncate px-4 py-2 text-xs md:text-sm">
               <NextLink
                 as={`/blogs/${blog.slug}`}
                 href="/blogs/[slug]"
-                className="text-base md:text-2xl font-medium text-black hover:text-blue-400 text-wrap"
+                className="text-base md:text-2xl font-medium text-slate-800 dark:text-black hover:text-blue-500 dark:hover:text-blue-400 text-wrap"
               >
                 {blog.title}
               </NextLink>

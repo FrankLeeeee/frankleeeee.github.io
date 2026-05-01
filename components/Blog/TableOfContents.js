@@ -32,7 +32,7 @@ const TableOfContents = ({ headings }) => {
 
   return (
     <nav aria-label="Table of contents">
-      <p className="text-white text-xs font-semibold mb-3 uppercase tracking-wider">
+      <p className="text-slate-900 dark:text-white text-xs font-semibold mb-3 uppercase tracking-wider">
         On this page
       </p>
       <ul className="space-y-1.5">
@@ -42,8 +42,8 @@ const TableOfContents = ({ headings }) => {
               href={`#${id}`}
               className={`text-sm leading-snug block py-0.5 transition-colors duration-150 ${
                 activeId === id
-                  ? "text-white font-medium"
-                  : "text-slate-400 hover:text-slate-200"
+                  ? "text-slate-900 dark:text-white font-medium"
+                  : "text-slate-500 dark:text-slate-400 hover:text-slate-700 dark:hover:text-slate-200"
               }`}
               onClick={(e) => {
                 e.preventDefault();

@@ -30,11 +30,11 @@ const Blog = ({
   slug,
 }) => {
   return (
-    <article className="prose min-w-0 mx-auto text-slate-400">
-      <h1 className="text-4xl text-white font-bold">{title}</h1>
-      <h4 className="text-sm text-slate-400">Published on {date}</h4>
-      <h4 className="text-sm text-slate-400">Reading time: {readingTime}</h4>
-      <h4 className="text-sm text-slate-400">Description: {description}</h4>
+    <article className="prose min-w-0 mx-auto text-slate-600 dark:text-slate-400">
+      <h1 className="text-4xl text-slate-900 dark:text-white font-bold">{title}</h1>
+      <h4 className="text-sm text-slate-500 dark:text-slate-400">Published on {date}</h4>
+      <h4 className="text-sm text-slate-500 dark:text-slate-400">Reading time: {readingTime}</h4>
+      <h4 className="text-sm text-slate-500 dark:text-slate-400">Description: {description}</h4>
       <Image src={ogImage.url} alt="blog cover" loading="lazy" width={800} height={450} className="w-full h-auto" />
 
       {/* social media sharing buttons */}
@@ -42,48 +42,48 @@ const Blog = ({
         <span className="text-sm text-slate-400">Share to:</span>
         <TwitterShareButton
           url={`https://franklee.xyz/blogs/${slug}`}
-          className="text-slate-400"
+          className="text-slate-500 dark:text-slate-400"
         >
           <XIcon
             size={24}
             round={true}
-            className="rounded-full border border-white"
+            className="rounded-full border border-slate-300 dark:border-white"
           />
         </TwitterShareButton>
         <LinkedinShareButton
           url={`https://franklee.xyz/blogs/${slug}`}
-          className="text-slate-400"
+          className="text-slate-500 dark:text-slate-400"
         >
           <LinkedinIcon size={24} round={true} />
         </LinkedinShareButton>
         <FacebookShareButton
           url={`https://franklee.xyz/blogs/${slug}`}
-          className="text-slate-400"
+          className="text-slate-500 dark:text-slate-400"
         >
           <FacebookIcon size={24} round={true} />
         </FacebookShareButton>
         <WhatsappShareButton
           url={`https://franklee.xyz/blogs/${slug}`}
-          className="text-slate-400"
+          className="text-slate-500 dark:text-slate-400"
         >
           <WhatsappIcon size={24} round={true} />
         </WhatsappShareButton>
         <RedditShareButton
           url={`https://franklee.xyz/blogs/${slug}`}
-          className="text-slate-400"
+          className="text-slate-500 dark:text-slate-400"
         >
           <RedditIcon size={24} round={true} />
         </RedditShareButton>
         <TelegramShareButton
           url={`https://franklee.xyz/blogs/${slug}`}
-          className="text-slate-400"
+          className="text-slate-500 dark:text-slate-400"
         >
           <TelegramIcon size={24} round={true} />
         </TelegramShareButton>
       </div>
 
       {/* create a line break before the markdown content */}
-      <hr className="rounded text-slate-400" />
+      <hr className="rounded text-slate-300 dark:text-slate-400" />
 
       <Markdown
         className="text-justify"

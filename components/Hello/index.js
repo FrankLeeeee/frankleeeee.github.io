@@ -3,7 +3,7 @@ import Type from "../Type";
 
 export default function Hello() {
   return (
-    <div className="flex flex-col space-y-4 text-3xl md:text-5xl text-slate-100">
+    <div className="flex flex-col space-y-4 text-3xl md:text-5xl text-slate-800 dark:text-slate-100">
       <h1>
         Hi There!{" "}
         <span className={styles.wave} role="img" aria-labelledby="wave">
