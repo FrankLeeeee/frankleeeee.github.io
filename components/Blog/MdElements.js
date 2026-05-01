@@ -3,7 +3,7 @@ import { oneDark } from "react-syntax-highlighter/dist/cjs/styles/prism";
 
 export const H1 = ({ children, id }) => {
   return (
-    <h1 id={id} className="text-white scroll-mt-20">
+    <h1 id={id} className="text-slate-900 dark:text-white scroll-mt-20">
       {children}
     </h1>
   );
@@ -11,7 +11,7 @@ export const H1 = ({ children, id }) => {
 
 export const H2 = ({ children, id }) => {
   return (
-    <h2 id={id} className="text-white scroll-mt-20">
+    <h2 id={id} className="text-slate-900 dark:text-white scroll-mt-20">
       {children}
     </h2>
   );
@@ -19,7 +19,7 @@ export const H2 = ({ children, id }) => {
 
 export const H3 = ({ children, id }) => {
   return (
-    <h3 id={id} className="text-white scroll-mt-20">
+    <h3 id={id} className="text-slate-800 dark:text-white scroll-mt-20">
       {children}
     </h3>
   );
@@ -27,7 +27,7 @@ export const H3 = ({ children, id }) => {
 
 export const H4 = ({ children, id }) => {
   return (
-    <h4 id={id} className="text-white scroll-mt-20">
+    <h4 id={id} className="text-slate-800 dark:text-white scroll-mt-20">
       {children}
     </h4>
   );
@@ -35,25 +35,23 @@ export const H4 = ({ children, id }) => {
 
 export const Link = ({ children, href }) => {
   return (
-    <a className="text-slate-200 break-all" href={href}>
+    <a className="text-blue-600 dark:text-slate-200 break-all" href={href}>
       {children}
     </a>
   );
 };
 
 export const ListItem = ({ children }) => {
-  return <li className="text-slate-400">{children}</li>;
+  return <li className="text-slate-600 dark:text-slate-400">{children}</li>;
 };
 
 export const Code = ({ className, children }) => {
-  // if a language is specified, use the SyntaxHighlighter
-  // the codeblock will pass the language as a className
   const match = /language-(\w+)/.exec(className || "");
   return match ? (
     <SyntaxHighlighter PreTag="div" language={match[1]} style={oneDark}>
       {String(children).replace(/\n$/, "")}
     </SyntaxHighlighter>
   ) : (
-    <code className="text-slate-200">{children}</code>
+    <code className="text-slate-700 dark:text-slate-200">{children}</code>
   );
 };

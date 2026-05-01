@@ -33,7 +33,7 @@ export default function Pagination({
   };
 
   return (
-    <nav className="flex items-center justify-between border-t border-gray-200 px-4 sm:px-0">
+    <nav className="flex items-center justify-between border-t border-gray-200 dark:border-gray-700 px-4 sm:px-0">
       {/* previous button */}
       <div className="-mt-px flex w-0 flex-1">
         <button

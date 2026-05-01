@@ -2,10 +2,11 @@ import { Disclosure } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
 import Image from "next/image";
+import ThemeToggle from "../ThemeToggle";
 
 export default function NavBar() {
   return (
-    <Disclosure as="nav" className="bg-black shadow">
+    <Disclosure as="nav" className="bg-background transition-colors duration-300">
       {({ open }) => (
         <>
           <div className="mx-auto max-w-7xl px-2 sm:px-4 lg:px-8">
@@ -22,23 +23,22 @@ export default function NavBar() {
                   />
                 </div>
               </div>
-              <div className="hidden items-center md:ml-6 md:space-x-8 md:flex md:flex-1  md:justify-end">
-                {/* only show this tabs when size is > md */}
+              <div className="hidden items-center md:ml-6 md:space-x-8 md:flex md:flex-1 md:justify-end">
                 <Link
                   href="/"
-                  className="inline-flex items-center px-1 pt-1 text-sm font-medium text-slate-200"
+                  className="inline-flex items-center px-1 pt-1 text-sm font-medium text-slate-700 dark:text-slate-200"
                 >
                   Home
                 </Link>
                 <Link
                   href="/about"
-                  className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-slate-200"
+                  className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-slate-700 dark:text-slate-200"
                 >
                   About
                 </Link>
                 <Link
                   href="/blogs"
-                  className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-slate-200 "
+                  className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-slate-700 dark:text-slate-200"
                 >
                   Blogs
                 </Link>
@@ -46,14 +46,15 @@ export default function NavBar() {
                   href="/assets/cv.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-slate-200 "
+                  className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-slate-700 dark:text-slate-200"
                 >
                   CV
                 </Link>
+                <ThemeToggle />
               </div>
-              <div className="flex items-center md:hidden">
-                {/* Mobile menu button */}
-                <Disclosure.Button className="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
+              <div className="flex items-center md:hidden space-x-2">
+                <ThemeToggle />
+                <Disclosure.Button className="inline-flex items-center justify-center rounded-md p-2 text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 hover:text-gray-700 dark:hover:text-gray-300 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
                   <span className="sr-only">Open main menu</span>
                   {open ? (
                     <XMarkIcon className="block h-6 w-6" aria-hidden="true" />
@@ -67,25 +68,24 @@ export default function NavBar() {
 
           <Disclosure.Panel className="md:hidden">
             <div className="space-y-1 pt-2 pb-3">
-              {/* Current: "bg-indigo-50 border-indigo-500 text-indigo-700", Default: "border-transparent text-gray-600 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-800" */}
               <Disclosure.Button
                 as={Link}
                 href="/"
-                className="block border-l-4 border-b py-2 pl-3 pr-4 text-base font-medium text-slate-200 hover:bg-white hover:text-black"
+                className="block border-l-4 border-b py-2 pl-3 pr-4 text-base font-medium text-slate-700 dark:text-slate-200 hover:bg-gray-100 dark:hover:bg-white hover:text-black"
               >
                 Home
               </Disclosure.Button>
               <Disclosure.Button
                 as={Link}
                 href="/about"
-                className="block border-l-4 border-b py-2 pl-3 pr-4 text-base font-medium text-slate-200 hover:bg-white hover:text-black"
+                className="block border-l-4 border-b py-2 pl-3 pr-4 text-base font-medium text-slate-700 dark:text-slate-200 hover:bg-gray-100 dark:hover:bg-white hover:text-black"
               >
                 About
               </Disclosure.Button>
               <Disclosure.Button
                 as={Link}
                 href="/blogs"
-                className="block border-l-4 border-b py-2 pl-3 pr-4 text-base font-medium text-slate-200 hover:bg-white hover:text-black"
+                className="block border-l-4 border-b py-2 pl-3 pr-4 text-base font-medium text-slate-700 dark:text-slate-200 hover:bg-gray-100 dark:hover:bg-white hover:text-black"
               >
                 Blogs
               </Disclosure.Button>
@@ -95,7 +95,7 @@ export default function NavBar() {
                 alt="alt text"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block border-l-4 border-b py-2 pl-3 pr-4 text-base font-medium text-slate-200 hover:bg-white hover:text-black"
+                className="block border-l-4 border-b py-2 pl-3 pr-4 text-base font-medium text-slate-700 dark:text-slate-200 hover:bg-gray-100 dark:hover:bg-white hover:text-black"
               >
                 CV
               </Disclosure.Button>
