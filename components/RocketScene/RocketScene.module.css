@@ -1,0 +1,52 @@
+/* Theme-conditional colors for the SVG celestial elements.
+   Light is the default; .dark on <html> swaps in the original deep-space palette. */
+.scene {
+  --rs-star: #564BD9;
+  --rs-spark: #6E63F2;
+  --rs-ring: #9095B0;
+  --rs-comet-from: #6E63F2;
+  --rs-comet-to: #564BD9;
+}
+:global(html.dark) .scene {
+  --rs-star: #EAEBFF;
+  --rs-spark: #CFD2FF;
+  --rs-ring: #5A5F86;
+  --rs-comet-from: #9C95F2;
+  --rs-comet-to: #B9B3FF;
+}
+
+.stars       { fill:   var(--rs-star);  transition: fill   0.3s ease; }
+.sparks      { stroke: var(--rs-spark); transition: stroke 0.3s ease; }
+.rings       { stroke: var(--rs-ring);  transition: stroke 0.3s ease; }
+.cometStop0  { stop-color: var(--rs-comet-from); stop-opacity: 0;   transition: stop-color 0.3s ease; }
+.cometStop1  { stop-color: var(--rs-comet-to);   stop-opacity: 0.9; transition: stop-color 0.3s ease; }
+
+.blob   { transform-box: fill-box; transform-origin: center; animation: breathe 14s ease-in-out infinite; }
+.planet { transform-box: fill-box; transform-origin: center; animation: floatA 11s ease-in-out infinite; }
+.moon   { transform-box: fill-box; transform-origin: center; animation: floatB 8s  ease-in-out infinite; }
+.star   { transform-box: fill-box; transform-origin: center; animation: twinkle 3.2s ease-in-out infinite; }
+.spark  { transform-box: fill-box; transform-origin: center; animation: spin 18s linear infinite, twinkle 4s ease-in-out infinite; }
+
+@keyframes breathe {
+  0%, 100% { transform: scale(1)     translate(0, 0); }
+  50%      { transform: scale(1.035) translate(6px, -8px); }
+}
+@keyframes floatA {
+  0%, 100% { transform: translate(0, 0)        scale(1); }
+  50%      { transform: translate(-10px, 12px) scale(1.04); }
+}
+@keyframes floatB {
+  0%, 100% { transform: translate(0, 0); }
+  50%      { transform: translate(10px, -9px); }
+}
+@keyframes twinkle {
+  0%, 100% { opacity: .35; transform: scale(.85); }
+  50%      { opacity: 1;   transform: scale(1.15); }
+}
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .blob, .planet, .moon, .star, .spark { animation: none; }
+}

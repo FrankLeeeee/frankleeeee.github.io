@@ -1,10 +1,14 @@
 import React from "react";
-import Image from "next/image";
+import dynamic from "next/dynamic";
 import Layout from "../components/Layout";
 import Contact from "../components/Contact";
 import Hello from "../components/Hello";
 import contacts from "../data/contacts";
 import Fade from "../components/Animations/Fade";
+
+const RocketScene = dynamic(() => import("../components/RocketScene"), {
+  ssr: false,
+});
 
 function App() {
   return (
@@ -16,14 +20,7 @@ function App() {
               <Hello />
             </Fade>
 
-            <Image
-              src="/assets/home-main.svg"
-              alt="home illustration"
-              className="max-h-48 md:max-h-64 lg:max-h-80 mt-8 w-auto"
-              width={600}
-              height={400}
-              priority
-            />
+            <RocketScene />
           </div>
         </div>
         <div className="mt-8 mb-16">
