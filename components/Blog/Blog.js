@@ -30,12 +30,26 @@ const Blog = ({
   slug,
 }) => {
   return (
-    <article className="prose min-w-0 mx-auto text-slate-600 dark:text-slate-400">
-      <h1 className="text-4xl text-slate-900 dark:text-white font-bold">{title}</h1>
-      <h4 className="text-sm text-slate-500 dark:text-slate-400">Published on {date}</h4>
-      <h4 className="text-sm text-slate-500 dark:text-slate-400">Reading time: {readingTime}</h4>
-      <h4 className="text-sm text-slate-500 dark:text-slate-400">Description: {description}</h4>
-      <Image src={ogImage.url} alt="blog cover" loading="lazy" width={800} height={450} className="w-full h-auto" />
+    <article
+      className="prose prose-slate dark:prose-invert prose-lg max-w-none min-w-0 mx-auto
+        prose-headings:font-semibold prose-headings:tracking-tight prose-headings:scroll-mt-24
+        prose-a:font-medium prose-a:no-underline hover:prose-a:underline prose-a:underline-offset-2
+        prose-img:rounded-xl prose-img:shadow-sm
+        prose-hr:border-slate-200 dark:prose-hr:border-slate-700
+        prose-blockquote:border-l-4 prose-blockquote:border-l-blue-500 prose-blockquote:not-italic prose-blockquote:font-normal
+        prose-pre:rounded-xl prose-pre:shadow-sm
+        prose-code:before:content-none prose-code:after:content-none prose-code:font-normal"
+    >
+      <h1 className="mb-3 text-slate-900 dark:text-white font-bold tracking-tight">{title}</h1>
+      <div className="not-prose mb-6 flex flex-wrap items-center gap-x-2 gap-y-1 text-sm text-slate-500 dark:text-slate-400">
+        <span>Published on {date}</span>
+        <span aria-hidden="true">•</span>
+        <span>{readingTime}</span>
+      </div>
+      <p className="not-prose mb-8 text-lg leading-relaxed text-slate-600 dark:text-slate-300">
+        {description}
+      </p>
+      <Image src={ogImage.url} alt="blog cover" loading="lazy" width={860} height={484} className="w-full h-auto rounded-xl" />
 
       {/* social media sharing buttons */}
       <div className="flex items-center gap-2">
@@ -86,7 +100,7 @@ const Blog = ({
       <hr className="rounded text-slate-300 dark:text-slate-400" />
 
       <Markdown
-        className="text-justify"
+        className="text-left"
         remarkPlugins={[remarkGfm]}
         rehypePlugins={[rehypeSlug, [rehypeExternalLinks, { target: "_blank", rel: ["noopener", "noreferrer"] }]]}
         components={{

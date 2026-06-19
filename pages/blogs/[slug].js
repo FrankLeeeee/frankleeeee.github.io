@@ -64,8 +64,8 @@ const BlogPost = ({ readingTime, frontMatter, slug, source, headings }) => {
           images: [{ url: frontMatter.ogImage.url, alt: frontMatter.title }],
         }}
       />
-      <div className="max-w-screen-xl mx-auto py-8 px-4 sm:px-8 xl:px-0">
-        <div className="xl:grid xl:grid-cols-[1fr_minmax(0,720px)_1fr] xl:items-start">
+      <div className="max-w-screen-2xl mx-auto py-8 px-4 sm:px-8 xl:px-0">
+        <div className="xl:grid xl:grid-cols-[1fr_minmax(0,860px)_1fr] xl:items-start">
           <div className="hidden xl:block" />
           <Blog
             readingTime={readingTime}

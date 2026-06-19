@@ -35,7 +35,10 @@ export const H4 = ({ children, id }) => {
 
 export const Link = ({ children, href }) => {
   return (
-    <a className="text-blue-600 dark:text-slate-200 break-all" href={href}>
+    <a
+      className="text-blue-600 dark:text-blue-400 font-medium underline decoration-blue-600/30 dark:decoration-blue-400/30 underline-offset-2 hover:decoration-blue-600 dark:hover:decoration-blue-400 break-words"
+      href={href}
+    >
       {children}
     </a>
   );
@@ -52,6 +55,8 @@ export const Code = ({ className, children }) => {
       {String(children).replace(/\n$/, "")}
     </SyntaxHighlighter>
   ) : (
-    <code className="text-slate-700 dark:text-slate-200">{children}</code>
+    <code className="rounded bg-slate-100 dark:bg-slate-800 px-1.5 py-0.5 text-[0.875em] font-medium text-slate-800 dark:text-slate-200">
+      {children}
+    </code>
   );
 };
