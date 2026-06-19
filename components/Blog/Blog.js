@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import Markdown from "react-markdown";
 import remarkGfm from "remark-gfm";
+import rehypeRaw from "rehype-raw";
 import rehypeSlug from "rehype-slug";
 import rehypeExternalLinks from "rehype-external-links";
 import { H2, H3, H4, Link, ListItem, Code } from "./MdElements";
@@ -102,7 +103,7 @@ const Blog = ({
       <Markdown
         className="text-left"
         remarkPlugins={[remarkGfm]}
-        rehypePlugins={[rehypeSlug, [rehypeExternalLinks, { target: "_blank", rel: ["noopener", "noreferrer"] }]]}
+        rehypePlugins={[rehypeRaw, rehypeSlug, [rehypeExternalLinks, { target: "_blank", rel: ["noopener", "noreferrer"] }]]}
         components={{
           h2: H2,
           h3: H3,
