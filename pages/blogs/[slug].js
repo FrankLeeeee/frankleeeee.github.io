@@ -65,7 +65,7 @@ const BlogPost = ({ readingTime, frontMatter, slug, source, headings }) => {
         }}
       />
       <div className="max-w-screen-2xl mx-auto py-8 px-4 sm:px-8 xl:px-0">
-        <div className="xl:grid xl:grid-cols-[1fr_minmax(0,860px)_1fr] xl:items-start">
+        <div className="xl:grid xl:grid-cols-[1fr_minmax(0,1024px)_1fr] xl:items-start">
           <div className="hidden xl:block" />
           <Blog
             readingTime={readingTime}
@@ -73,7 +73,6 @@ const BlogPost = ({ readingTime, frontMatter, slug, source, headings }) => {
             description={frontMatter.description}
             date={frontMatter.date}
             content={source}
-            ogImage={frontMatter.ogImage}
             slug={slug}
           />
           <div className="hidden xl:block xl:self-stretch">

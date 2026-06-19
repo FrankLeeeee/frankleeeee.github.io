@@ -1,11 +1,10 @@
 import React from "react";
-import Image from "next/image";
 import Markdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import rehypeRaw from "rehype-raw";
 import rehypeSlug from "rehype-slug";
 import rehypeExternalLinks from "rehype-external-links";
-import { H2, H3, H4, Link, ListItem, Code } from "./MdElements";
+import { H2, H3, H4, Link, ListItem, Code, Img } from "./MdElements";
 import {
   FacebookShareButton,
   LinkedinShareButton,
@@ -26,19 +25,15 @@ const Blog = ({
   title,
   description,
   date,
-  ogImage,
   content,
   slug,
 }) => {
   return (
     <article
-      className="prose prose-slate dark:prose-invert prose-lg max-w-none min-w-0 mx-auto
-        prose-headings:font-semibold prose-headings:tracking-tight prose-headings:scroll-mt-24
-        prose-a:font-medium prose-a:no-underline hover:prose-a:underline prose-a:underline-offset-2
-        prose-img:rounded-xl prose-img:shadow-sm
-        prose-hr:border-slate-200 dark:prose-hr:border-slate-700
-        prose-blockquote:border-l-4 prose-blockquote:border-l-blue-500 prose-blockquote:not-italic prose-blockquote:font-normal
-        prose-pre:rounded-xl prose-pre:shadow-sm
+      className="prose prose-slate dark:prose-invert prose-lg max-w-none min-w-0
+        prose-headings:font-sans prose-headings:font-semibold prose-headings:scroll-mt-24
+        prose-img:rounded-xl prose-img:shadow-sm prose-img:ring-1 prose-img:ring-slate-200/70 dark:prose-img:ring-slate-700/50
+        prose-pre:bg-transparent prose-pre:p-0 prose-pre:m-0 prose-pre:rounded-none
         prose-code:before:content-none prose-code:after:content-none prose-code:font-normal"
     >
       <h1 className="mb-3 text-slate-900 dark:text-white font-bold tracking-tight">{title}</h1>
@@ -50,7 +45,6 @@ const Blog = ({
       <p className="not-prose mb-8 text-lg leading-relaxed text-slate-600 dark:text-slate-300">
         {description}
       </p>
-      <Image src={ogImage.url} alt="blog cover" loading="lazy" width={860} height={484} className="w-full h-auto rounded-xl" />
 
       {/* social media sharing buttons */}
       <div className="flex items-center gap-2">
@@ -111,6 +105,7 @@ const Blog = ({
           a: Link,
           li: ListItem,
           code: Code,
+          img: Img,
         }}
       >
         {content}
