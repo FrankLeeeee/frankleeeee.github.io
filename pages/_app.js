@@ -1,18 +1,24 @@
 import "../styles/globals.css";
-import { Raleway } from "next/font/google";
+import { Raleway, JetBrains_Mono } from "next/font/google";
 import Head from "next/head";
 import Script from "next/script";
 import { DefaultSeo } from "next-seo";
 import SEO from "../next-seo.config";
 import { ThemeProvider } from "../components/ThemeToggle";
 
-const raleway = Raleway({ subsets: ["latin"] });
+const raleway = Raleway({ subsets: ["latin"], variable: "--font-sans" });
+const jetbrainsMono = JetBrains_Mono({
+  subsets: ["latin"],
+  variable: "--font-mono",
+});
 
 // // This default export is required in a new `pages/_app.js` file.
 export default function MyApp({ Component, pageProps }) {
   return (
     <ThemeProvider>
-      <main className={raleway.className}>
+      <main
+        className={`${raleway.className} ${raleway.variable} ${jetbrainsMono.variable}`}
+      >
         {/* google analytics */}
         <Script
           strategy="afterInteractive"

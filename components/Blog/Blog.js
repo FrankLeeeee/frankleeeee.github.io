@@ -1,10 +1,10 @@
 import React from "react";
-import Image from "next/image";
 import Markdown from "react-markdown";
 import remarkGfm from "remark-gfm";
+import rehypeRaw from "rehype-raw";
 import rehypeSlug from "rehype-slug";
 import rehypeExternalLinks from "rehype-external-links";
-import { H2, H3, H4, Link, ListItem, Code } from "./MdElements";
+import { H2, H3, H4, Link, ListItem, Code, Img } from "./MdElements";
 import {
   FacebookShareButton,
   LinkedinShareButton,
@@ -25,17 +25,26 @@ const Blog = ({
   title,
   description,
   date,
-  ogImage,
   content,
   slug,
 }) => {
   return (
-    <article className="prose min-w-0 mx-auto text-slate-600 dark:text-slate-400">
-      <h1 className="text-4xl text-slate-900 dark:text-white font-bold">{title}</h1>
-      <h4 className="text-sm text-slate-500 dark:text-slate-400">Published on {date}</h4>
-      <h4 className="text-sm text-slate-500 dark:text-slate-400">Reading time: {readingTime}</h4>
-      <h4 className="text-sm text-slate-500 dark:text-slate-400">Description: {description}</h4>
-      <Image src={ogImage.url} alt="blog cover" loading="lazy" width={800} height={450} className="w-full h-auto" />
+    <article
+      className="prose prose-slate dark:prose-invert prose-lg max-w-none min-w-0
+        prose-headings:font-sans prose-headings:font-semibold prose-headings:scroll-mt-24
+        prose-img:rounded-xl prose-img:shadow-sm prose-img:ring-1 prose-img:ring-slate-200/70 dark:prose-img:ring-slate-700/50
+        prose-pre:bg-transparent prose-pre:p-0 prose-pre:m-0 prose-pre:rounded-none
+        prose-code:before:content-none prose-code:after:content-none prose-code:font-normal"
+    >
+      <h1 className="mb-3 text-slate-900 dark:text-white font-bold tracking-tight">{title}</h1>
+      <div className="not-prose mb-6 flex flex-wrap items-center gap-x-2 gap-y-1 text-sm text-slate-500 dark:text-slate-400">
+        <span>Published on {date}</span>
+        <span aria-hidden="true">•</span>
+        <span>{readingTime}</span>
+      </div>
+      <p className="not-prose mb-8 text-lg leading-relaxed text-slate-600 dark:text-slate-300">
+        {description}
+      </p>
 
       {/* social media sharing buttons */}
       <div className="flex items-center gap-2">
@@ -86,9 +95,9 @@ const Blog = ({
       <hr className="rounded text-slate-300 dark:text-slate-400" />
 
       <Markdown
-        className="text-justify"
+        className="text-left"
         remarkPlugins={[remarkGfm]}
-        rehypePlugins={[rehypeSlug, [rehypeExternalLinks, { target: "_blank", rel: ["noopener", "noreferrer"] }]]}
+        rehypePlugins={[rehypeRaw, rehypeSlug, [rehypeExternalLinks, { target: "_blank", rel: ["noopener", "noreferrer"] }]]}
         components={{
           h2: H2,
           h3: H3,
@@ -96,6 +105,7 @@ const Blog = ({
           a: Link,
           li: ListItem,
           code: Code,
+          img: Img,
         }}
       >
         {content}

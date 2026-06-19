@@ -129,3 +129,44 @@ color-3 {
   background-image: linear-gradient(to right, #667eea, #764ba2, #6B8DD6, #8E37D7);
   box-shadow: 0 4px 15px 0 rgba(116, 79, 168, 0.75);
 }
+
+/* ---- blog reading refinements ---- */
+
+/* brand-tinted text selection */
+.prose ::selection {
+  background-color: rgba(37, 99, 235, 0.18);
+}
+html.dark .prose ::selection {
+  background-color: rgba(96, 165, 250, 0.28);
+}
+
+/* ==highlight== / <mark> styling */
+.prose mark {
+  background-image: linear-gradient(
+    to bottom,
+    transparent 8%,
+    rgba(250, 204, 21, 0.45) 8%
+  );
+  color: inherit;
+  padding: 0 0.1em;
+  border-radius: 0.1em;
+}
+html.dark .prose mark {
+  background-image: linear-gradient(
+    to bottom,
+    transparent 8%,
+    rgba(250, 204, 21, 0.28) 8%
+  );
+  color: #fde68a;
+}
+
+/* keyboard keys */
+.prose kbd {
+  font-family: var(--font-mono);
+  font-size: 0.8em;
+  padding: 0.15em 0.4em;
+  border-radius: 0.375rem;
+  border: 1px solid hsl(var(--border));
+  background: hsl(var(--muted));
+  box-shadow: 0 1px 0 1px hsl(var(--border));
+}

@@ -34,7 +34,12 @@ An agent is an autonomous system designed to perceive its environment, make deci
 
 ReAct agent is a simple but useful concept in agent, proposed by the OpenAI researcher Shunyu Yao. It combines both reasoning and execution in an interleaved manner to improve the agent's performance in tasks. ReAct agents iteratively think and reason about the current task, and then decide whether to use tools to complete the current task. If the tools are needed, it will take the action and update the internal state. The general workflow is shown below.
 
-![Manus](https://franklee.xyz/public_assets/blog_media/2025-04-27-open-manus/react.png)
+<p>
+    <img src="https://franklee.xyz/public_assets/blog_media/2025-04-27-open-manus/react.png" width="400" alt>
+    <center>
+    <em>ReAct agent workflow</em>
+    </center>
+</p>
 
 ### 3. Function Calling
 
@@ -81,7 +86,7 @@ print(response.choices[0].message.tool_calls)
 
 The API will return a response like below. The response contains the name(s) of the function(s) to use, and the corresponding parameters structured in json format. In this way, the developer can look up for the actual function code and execute that function with the given parameters.
 
-```text
+```python
 [
     ChatCompletionMessageToolCall(
         id='call_xFu1qgsnPzzviCxNvDNcXf41',
@@ -108,14 +113,18 @@ This subsection cover the major modules in the OpenManus project. Each module is
 
 #### Agents
 
-![Agents](https://franklee.xyz/public_assets/blog_media/2025-04-27-open-manus/agent.png)
+<p>
+    <img src="https://franklee.xyz/public_assets/blog_media/2025-04-27-open-manus/agent.png" width="800" alt>
+    <center>
+    <em>Agents</em>
+    </center>
+</p>
 
 The [agent](https://github.com/mannaandpoem/OpenManus/tree/main/app/agent) module is the entrypoint of the agent system. It is responsible for the overall workflow of the agent system. As shown in the diagram above, the agents are organized in a hierarchical structure and the `ReActAgent` and `ToolCallAgent` define the core logic flow for task automation. Each class' duty is explained below:
 
 1. BaseAgent
 
    This is the most fundamental class of an agent, it mainly takes care of the properties and states of the agent. For example, it has a name and description and also a system prompt to interact with the LLMs. The run method is the entrypoint of this agent, in run, the agent basically runs the step method repeatedly until its agent becomes FINISHED or IDLE.
-
    - Finished: means the agent has finished the task
    - IDLE: means the agent has not finished the task but has reached the max number of steps, so it is forced to terminate
 
@@ -235,7 +244,12 @@ The [agent](https://github.com/mannaandpoem/OpenManus/tree/main/app/agent) modul
 
 #### Tools
 
-![Tools](https://franklee.xyz/public_assets/blog_media/2025-04-27-open-manus/tools.png)
+<p>
+    <img src="https://franklee.xyz/public_assets/blog_media/2025-04-27-open-manus/tools.png" width="800" alt>
+    <center>
+    <em>Tools</em>
+    </center>
+</p>
 
 The `tools` module implements a collection to external tools which can be used by the agent to retrive information and reason.
 
@@ -254,7 +268,6 @@ The `tools` module implements a collection to external tools which can be used b
 4. DeepResearch
 
    The Deep Research tool is a tool that can be used to perform a complete research cycle. It can be seen as an extension of the chat completion and web search by following the following steps:
-
    - Optimize the search query using LLM
    - Perform a complete research cycle:
    - Search on the web
@@ -290,7 +303,12 @@ The `tools` module implements a collection to external tools which can be used b
 
 The sandbox module is responsible for creating an isolated environment for the agent to execute the task. It is a wrapper for the Docker SDK and provides a unified interface for the agent to interact with the sandbox.
 
-![  ](https://franklee.xyz/public_assets/blog_media/2025-04-27-open-manus/sandbox.png)
+<p>
+    <img src="https://franklee.xyz/public_assets/blog_media/2025-04-27-open-manus/sandbox.png" width="800" alt>
+    <center>
+    <em>Sandbox</em>
+    </center>
+</p>
 
 1. BaseSandboxClient
 
@@ -316,7 +334,12 @@ The sandbox module is responsible for creating an isolated environment for the a
 
 Memory is a module that manages the conversation history (context) of the agent. It is responsible for storing the messages and the states of the agent.
 
-![Memory](https://franklee.xyz/public_assets/blog_media/2025-04-27-open-manus/memory.png)
+<p>
+    <img src="https://franklee.xyz/public_assets/blog_media/2025-04-27-open-manus/memory.png" width="400" alt>
+    <center>
+    <em>Memory</em>
+    </center>
+</p>
 
 1. Message
 
