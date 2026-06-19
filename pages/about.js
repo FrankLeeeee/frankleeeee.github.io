@@ -9,6 +9,8 @@ import honours from "../data/honours";
 import GoogleScholarButton from "../components/GoogleScholarButton";
 import HonourList from "../components/HonourList";
 import Profile from "../components/Profile";
+import ExperienceList from "../components/ExperienceList";
+import experiences from "../data/experiences";
 
 function About() {
   return (
@@ -19,6 +21,10 @@ function About() {
             <Profile />
             <Aboutcard />
           </div>
+        </Section>
+
+        <Section title="Experiences">
+          <ExperienceList data={experiences} />
         </Section>
 
         <Section title="News">
